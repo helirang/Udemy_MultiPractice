@@ -1,0 +1,881 @@
+﻿Log file open, 07/12/21 22:23:19
+LogWindows: Failed to load 'aqProf.dll' (GetLastError=126)
+LogWindows: File 'aqProf.dll' does not exist
+LogWindows: Failed to load 'VSPerf140.dll' (GetLastError=126)
+LogWindows: File 'VSPerf140.dll' does not exist
+LogWindows: Failed to load 'VtuneApi.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi.dll' does not exist
+LogWindows: Failed to load 'VtuneApi32e.dll' (GetLastError=126)
+LogWindows: File 'VtuneApi32e.dll' does not exist
+LogInit: Display: Running engine for game: CoopGame
+LogPlatformFile: Not using cached read wrapper
+LogInit: Display: RandInit(-1562068504) SRandInit(-1562068504).
+LogTaskGraph: Started task graph with 5 named threads and 20 total threads with 3 sets of task threads.
+LogStats: Stats thread started at 0.307301
+LogD3D11RHI: Aftermath initialized
+LogPluginManager: Mounting plugin Paper2D
+LogPluginManager: Mounting plugin LightPropagationVolume
+LogPluginManager: Mounting plugin CodeLiteSourceCodeAccess
+LogPluginManager: Mounting plugin GitSourceControl
+LogPluginManager: Mounting plugin KDevelopSourceCodeAccess
+LogPluginManager: Mounting plugin NullSourceCodeAccess
+LogPluginManager: Mounting plugin PerforceSourceControl
+LogPluginManager: Mounting plugin SubversionSourceControl
+LogPluginManager: Mounting plugin UObjectPlugin
+LogPluginManager: Mounting plugin VisualStudioSourceCodeAccess
+LogPluginManager: Mounting plugin XCodeSourceCodeAccess
+LogPluginManager: Mounting plugin AssetManagerEditor
+LogPluginManager: Mounting plugin AudioCapture
+LogPluginManager: Mounting plugin FacialAnimation
+LogPluginManager: Mounting plugin GameplayTagsEditor
+LogPluginManager: Mounting plugin MobileLauncherProfileWizard
+LogPluginManager: Mounting plugin PluginBrowser
+LogPluginManager: Mounting plugin SpeedTreeImporter
+LogPluginManager: Mounting plugin AlembicImporter
+LogPluginManager: Mounting plugin CharacterAI
+LogPluginManager: Mounting plugin HTML5Networking
+LogPluginManager: Mounting plugin AndroidMedia
+LogPluginManager: Mounting plugin AvfMedia
+LogPluginManager: Mounting plugin MediaPlayerEditor
+LogPluginManager: Mounting plugin WmfMedia
+LogPluginManager: Mounting plugin TcpMessaging
+LogPluginManager: Mounting plugin UdpMessaging
+LogPluginManager: Mounting plugin LevelSequenceEditor
+LogPluginManager: Mounting plugin MatineeToLevelSequence
+LogPluginManager: Mounting plugin OnlineSubsystemGooglePlay
+LogPluginManager: Mounting plugin OnlineSubsystemIOS
+LogPluginManager: Mounting plugin OnlineSubsystem
+LogPluginManager: Mounting plugin OnlineSubsystemNull
+LogPluginManager: Mounting plugin OnlineSubsystemUtils
+LogPluginManager: Mounting plugin AndroidDeviceProfileSelector
+LogPluginManager: Mounting plugin AndroidMoviePlayer
+LogPluginManager: Mounting plugin AndroidPermission
+LogPluginManager: Mounting plugin AppleMoviePlayer
+LogPluginManager: Mounting plugin ArchVisCharacter
+LogPluginManager: Mounting plugin CableComponent
+LogPluginManager: Mounting plugin CustomMeshComponent
+LogPluginManager: Mounting plugin ExampleDeviceProfileSelector
+LogPluginManager: Mounting plugin GoogleCloudMessaging
+LogPluginManager: Mounting plugin ImmediatePhysics
+LogPluginManager: Mounting plugin IOSDeviceProfileSelector
+LogPluginManager: Mounting plugin LinuxDeviceProfileSelector
+LogPluginManager: Mounting plugin LocationServicesBPLibrary
+LogPluginManager: Mounting plugin MobilePatchingUtils
+LogPluginManager: Mounting plugin OculusVR
+LogPluginManager: Mounting plugin PhysXVehicles
+LogPluginManager: Mounting plugin ProceduralMeshComponent
+LogPluginManager: Mounting plugin RuntimePhysXCooking
+LogPluginManager: Mounting plugin SteamVR
+LogPluginManager: Mounting plugin WindowsMoviePlayer
+LogInit: Using libcurl 7.47.1
+LogInit:  - built for x86_64-pc-win32
+LogInit:  - supports SSL with OpenSSL/1.0.2g
+LogInit:  - supports HTTP deflate (compression) using libz 1.2.8
+LogInit:  - other features:
+LogInit:      CURL_VERSION_SSL
+LogInit:      CURL_VERSION_LIBZ
+LogInit:      CURL_VERSION_IPV6
+LogInit:      CURL_VERSION_ASYNCHDNS
+LogInit:      CURL_VERSION_LARGEFILE
+LogInit:      CURL_VERSION_IDN
+LogInit:  CurlRequestOptions (configurable via config and command line):
+LogInit:  - bVerifyPeer = false  - Libcurl will NOT verify peer certificate
+LogInit:  - bUseHttpProxy = false  - Libcurl will NOT use HTTP proxy
+LogInit:  - bDontReuseConnections = false  - Libcurl will reuse connections
+LogInit:  - CertBundlePath = nullptr  - Libcurl will use whatever was configured at build time.
+LogInit: Build: ++UE4+Release-4.17-CL-3658906
+LogInit: Engine Version: 4.17.2-3658906+++UE4+Release-4.17
+LogInit: Compatible Engine Version: 4.17.0-3573198+++UE4+Release-4.17
+LogInit: Net CL: 3573198
+LogDevObjectVersion: Number of dev versions registered: 16
+LogDevObjectVersion:   Dev-Blueprints (B0D832E4-1F89-4F0D-ACCF-7EB736FD4AA2): 10
+LogDevObjectVersion:   Dev-Build (E1C64328-A22C-4D53-A36C-8E866417BD8C): 0
+LogDevObjectVersion:   Dev-Core (375EC13C-06E4-48FB-B500-84F0262A717E): 2
+LogDevObjectVersion:   Dev-Editor (E4B068ED-F494-42E9-A231-DA0B2E46BB41): 20
+LogDevObjectVersion:   Dev-Framework (CFFC743F-43B0-4480-9391-14DF171D2073): 28
+LogDevObjectVersion:   Dev-Mobile (B02B49B5-BB20-44E9-A304-32B752E40360): 0
+LogDevObjectVersion:   Dev-Networking (A4E4105C-59A1-49B5-A7C5-40C4547EDFEE): 0
+LogDevObjectVersion:   Dev-Online (39C831C9-5AE6-47DC-9A44-9C173E1C8E7C): 0
+LogDevObjectVersion:   Dev-Physics (78F01B33-EBEA-4F98-B9B4-84EACCB95AA2): 0
+LogDevObjectVersion:   Dev-Platform (6631380F-2D4D-43E0-8009-CF276956A95A): 0
+LogDevObjectVersion:   Dev-Rendering (12F88B9F-8875-4AFC-A67C-D90C383ABD29): 19
+LogDevObjectVersion:   Dev-Sequencer (7B5AE74C-D270-4C10-A958-57980B212A5A): 4
+LogDevObjectVersion:   Dev-VR (D7296918-1DD6-4BDD-9DE2-64A83CC13884): 0
+LogDevObjectVersion:   Dev-LoadTimes (C2A15278-BFE7-4AFE-6C17-90FF531DF755): 1
+LogDevObjectVersion:   Private-Geometry (6EACA3D4-40EC-4CC1-B786-8BED09428FC5): 1
+LogDevObjectVersion:   Dev-AnimPhys (29E575DD-E0A3-4627-9D10-D276232CDCEA): 7
+LogInit: Compiled (64-bit): Sep 22 2017 13:47:16
+LogInit: Compiled with Visual C++: 19.00.24215.01
+LogInit: Build Configuration: Development
+LogInit: Branch Name: ++UE4+Release-4.17
+LogInit: Command line: -EpicPortal  -epicusername="hOpEs4231" -epicuserid=b768b48376a54a88b3d75ccaa13b6283 -epiclocale=ko
+LogInit: Base directory: D:/UE4/UE_4.17/Engine/Binaries/Win64/
+LogInit: Installed Engine Build: 1
+LogInit: Presizing for max 8388607 objects, including 0 objects not considered by GC, pre-allocating 0 bytes for permanent pool.
+LogInit: Object subsystem initialized
+[2021.07.12-13.23.20:346][  0]LogInit: Selected Device Profile: [Windows]
+[2021.07.12-13.23.20:346][  0]LogInit: Applying CVar settings loaded from the selected device profile: [Windows]
+[2021.07.12-13.23.20:352][  0]LogInit: Computer: DESKTOP-0H274VF
+[2021.07.12-13.23.20:352][  0]LogInit: User: helirang
+[2021.07.12-13.23.20:352][  0]LogInit: CPU Page size=4096, Cores=6
+[2021.07.12-13.23.20:352][  0]LogInit: High frequency timer resolution =10.000000 MHz
+[2021.07.12-13.23.20:353][  0]LogMemory: Memory total: Physical=15.9GB (16GB approx)
+[2021.07.12-13.23.20:353][  0]LogMemory: Platform Memory Stats for Windows
+[2021.07.12-13.23.20:353][  0]LogMemory: Process Physical Memory: 280.52 MB used, 280.52 MB peak
+[2021.07.12-13.23.20:353][  0]LogMemory: Process Virtual Memory: 280.85 MB used, 280.85 MB peak
+[2021.07.12-13.23.20:353][  0]LogMemory: Physical Memory: 8377.21 MB used,  7865.02 MB free, 16242.23 MB total
+[2021.07.12-13.23.20:353][  0]LogMemory: Virtual Memory: 4799.81 MB used,  7865.02 MB free, 134217728.00 MB total
+[2021.07.12-13.23.20:577][  0]LogInit: Using OS detected language (ko-KR).
+[2021.07.12-13.23.20:577][  0]LogInit: Using OS detected locale (ko-KR).
+[2021.07.12-13.23.20:583][  0]LogTextLocalizationManager: No specific localization for 'ko-KR' exists, so the 'ko' localization will be used.
+[2021.07.12-13.23.21:181][  0]LogD3D11RHI: D3D11 adapters:
+[2021.07.12-13.23.21:331][  0]LogD3D11RHI:    0. 'NVIDIA GeForce GTX 1650' (Feature Level 11_0)
+[2021.07.12-13.23.21:331][  0]LogD3D11RHI:       3962/0/8121 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x10de
+[2021.07.12-13.23.21:916][  0]LogD3D11RHI:    1. 'Intel(R) UHD Graphics 630' (Feature Level 11_0)
+[2021.07.12-13.23.21:917][  0]LogD3D11RHI:       128/0/8121 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:1, VendorId:0x8086
+[2021.07.12-13.23.21:920][  0]LogD3D11RHI:    2. 'Microsoft Basic Render Driver' (Feature Level 11_0)
+[2021.07.12-13.23.21:920][  0]LogD3D11RHI:       0/0/8121 MB DedicatedVideo/DedicatedSystem/SharedSystem, Outputs:0, VendorId:0x1414
+[2021.07.12-13.23.21:920][  0]LogD3D11RHI: Chosen D3D11 Adapter: 0
+[2021.07.12-13.23.21:931][  0]LogD3D11RHI: Creating new Direct3DDevice
+[2021.07.12-13.23.21:931][  0]LogD3D11RHI:     GPU DeviceId: 0x1f91 (for the marketing name, search the web for "GPU Device Id")
+[2021.07.12-13.23.21:931][  0]LogWindows: EnumDisplayDevices:
+[2021.07.12-13.23.21:932][  0]LogWindows:    0. 'Intel(R) UHD Graphics 630' (P:0 D:1)
+[2021.07.12-13.23.21:933][  0]LogWindows:    1. 'Intel(R) UHD Graphics 630' (P:0 D:0)
+[2021.07.12-13.23.21:934][  0]LogWindows:    2. 'Intel(R) UHD Graphics 630' (P:0 D:0)
+[2021.07.12-13.23.21:935][  0]LogWindows:    3. 'NVIDIA GeForce GTX 1650' (P:1 D:1)
+[2021.07.12-13.23.21:936][  0]LogWindows:    4. 'NVIDIA GeForce GTX 1650' (P:0 D:0)
+[2021.07.12-13.23.21:937][  0]LogWindows:    5. 'NVIDIA GeForce GTX 1650' (P:0 D:0)
+[2021.07.12-13.23.21:938][  0]LogWindows:    6. 'NVIDIA GeForce GTX 1650' (P:0 D:0)
+[2021.07.12-13.23.21:939][  0]LogWindows: DebugString: GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter GetVideoDriverDetailsInvalid PrimaryIsNotTheChoosenAdapter FoundDriverCount:0 
+[2021.07.12-13.23.21:939][  0]LogD3D11RHI:     Adapter Name: NVIDIA GeForce GTX 1650
+[2021.07.12-13.23.21:939][  0]LogD3D11RHI:   Driver Version: Unknown (internal:Unknown, unified:Unknown)
+[2021.07.12-13.23.21:939][  0]LogD3D11RHI:      Driver Date: Unknown
+[2021.07.12-13.23.21:939][  0]LogRHI: Texture pool is 1361 MB (70% of 1945 MB)
+[2021.07.12-13.23.22:063][  0]LogD3D11RHI: Async texture creation enabled
+[2021.07.12-13.23.22:080][  0]LogD3D11RHI: GPU Timing Frequency: 1000.000000 (Debug: 2 2)
+[2021.07.12-13.23.22:090][  0]LogShaderCompilers: Guid format shader working directory is -38 characters bigger than the processId version (../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Intermediate/Shaders/WorkingDirectory/14464/).
+[2021.07.12-13.23.22:090][  0]LogShaderCompilers: Cleaned the shader compiler working directory 'C:/Users/helirang/AppData/Local/Temp/UnrealShaderWorkingDir/200B74314091E66F450F528F93F2DAA9/'.
+[2021.07.12-13.23.22:090][  0]LogShaderCompilers: Display: Using Local Shader Compiler.
+[2021.07.12-13.23.23:161][  0]LogTemp: Display: Loaded TP AllDesktopTargetPlatform
+[2021.07.12-13.23.23:229][  0]LogTemp: Display: Loaded TP MacClientTargetPlatform
+[2021.07.12-13.23.23:302][  0]LogTemp: Display: Loaded TP MacNoEditorTargetPlatform
+[2021.07.12-13.23.23:370][  0]LogTemp: Display: Loaded TP MacServerTargetPlatform
+[2021.07.12-13.23.23:438][  0]LogTemp: Display: Loaded TP MacTargetPlatform
+[2021.07.12-13.23.23:507][  0]LogTemp: Display: Loaded TP WindowsClientTargetPlatform
+[2021.07.12-13.23.23:582][  0]LogTemp: Display: Loaded TP WindowsNoEditorTargetPlatform
+[2021.07.12-13.23.23:647][  0]LogTemp: Display: Loaded TP WindowsServerTargetPlatform
+[2021.07.12-13.23.23:703][  0]LogTemp: Display: Loaded TP WindowsTargetPlatform
+[2021.07.12-13.23.23:773][  0]LogTemp: Display: Loaded TP AndroidTargetPlatform
+[2021.07.12-13.23.23:837][  0]LogTemp: Display: Loaded TP Android_ASTCTargetPlatform
+[2021.07.12-13.23.23:903][  0]LogTemp: Display: Loaded TP Android_ATCTargetPlatform
+[2021.07.12-13.23.23:970][  0]LogTemp: Display: Loaded TP Android_DXTTargetPlatform
+[2021.07.12-13.23.24:046][  0]LogTemp: Display: Loaded TP Android_ETC1TargetPlatform
+[2021.07.12-13.23.24:109][  0]LogTemp: Display: Loaded TP Android_ETC2TargetPlatform
+[2021.07.12-13.23.24:230][  0]LogTemp: Display: Loaded TP Android_MultiTargetPlatform
+[2021.07.12-13.23.24:230][  0]LogTemp: Display: Loaded TP Android_PVRTCTargetPlatform
+[2021.07.12-13.23.24:285][  0]LogTemp: Display: Loaded TP HTML5TargetPlatform
+[2021.07.12-13.23.24:399][  0]LogTemp: Display: Loaded TP IOSTargetPlatform
+[2021.07.12-13.23.24:435][  0]LogTemp: Display: Loaded TP TVOSTargetPlatform
+[2021.07.12-13.23.24:495][  0]LogTemp: Display: Loaded TP LinuxClientTargetPlatform
+[2021.07.12-13.23.24:548][  0]LogTemp: Display: Loaded TP LinuxNoEditorTargetPlatform
+[2021.07.12-13.23.24:608][  0]LogTemp: Display: Loaded TP LinuxServerTargetPlatform
+[2021.07.12-13.23.24:671][  0]LogTemp: Display: Loaded TP LinuxTargetPlatform
+[2021.07.12-13.23.24:671][  0]LogTargetPlatformManager: Display: Building Assets For Windows
+[2021.07.12-13.23.25:252][  0]LogDerivedDataCache: Display: Max Cache Size: 512 MB
+[2021.07.12-13.23.25:328][  0]LogDerivedDataCache: Loaded boot cache 0.08s 93MB C:/Users/helirang/AppData/Local/UnrealEngine/4.17/DerivedDataCache/Boot.ddc.
+[2021.07.12-13.23.25:328][  0]LogDerivedDataCache: Display: Loaded Boot cache: C:/Users/helirang/AppData/Local/UnrealEngine/4.17/DerivedDataCache/Boot.ddc
+[2021.07.12-13.23.25:328][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  Pak pak cache file ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/DerivedDataCache/DDC.ddp not found, will not use a pak cache.
+[2021.07.12-13.23.25:328][  0]LogDerivedDataCache: Unable to find inner node Pak for hierarchical cache Hierarchy.
+[2021.07.12-13.23.25:328][  0]LogDerivedDataCache: FDerivedDataBackendGraph:  CompressedPak pak cache file ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/DerivedDataCache/Compressed.ddp not found, will not use a pak cache.
+[2021.07.12-13.23.25:328][  0]LogDerivedDataCache: Unable to find inner node CompressedPak for hierarchical cache Hierarchy.
+[2021.07.12-13.23.25:341][  0]LogDerivedDataCache: Display: Pak cache opened for reading ../../../Engine/DerivedDataCache/Compressed.ddp.
+[2021.07.12-13.23.25:354][  0]LogDerivedDataCache: Using Local data cache path C:/Users/helirang/AppData/Local/UnrealEngine/Common/DerivedDataCache: Writable
+[2021.07.12-13.23.25:363][  0]LogMaterial: Verifying Global Shaders for PCD3D_SM5
+[2021.07.12-13.23.25:364][  0]LogSlate: Using Freetype 2.6.0
+[2021.07.12-13.23.25:365][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2021.07.12-13.23.25:365][  0]LogSlate: SlateFontCache - WITH_FREETYPE: 1, WITH_HARFBUZZ: 1
+[2021.07.12-13.23.25:636][  0]LogAssetRegistry: FAssetRegistry took 0.0256 seconds to start up
+[2021.07.12-13.23.25:765][  0]LogInit: Selected Device Profile: [Windows]
+[2021.07.12-13.23.26:178][  0]LogSimplygon: Simplygon DLL not present - disabling.
+[2021.07.12-13.23.26:227][  0]LogMeshReduction: Using SimplygonSwarm for distributed automatic mesh merging
+[2021.07.12-13.23.26:227][  0]LogMeshReduction: Using QuadricMeshReduction for automatic static mesh reduction
+[2021.07.12-13.23.26:227][  0]LogMeshReduction: No automatic skeletal mesh reduction module available
+[2021.07.12-13.23.26:227][  0]LogMeshReduction: No automatic mesh merging module available
+[2021.07.12-13.23.26:227][  0]LogMeshMerging: No automatic mesh merging module available
+[2021.07.12-13.23.26:241][  0]LogContentStreaming: Texture pool size is 0.00 MB
+[2021.07.12-13.23.26:661][  0]LogNetVersion: CoopGame , NetCL: 3573198, EngineNetVer: 2, GameNetVer: 0 (Checksum: 471078940)
+[2021.07.12-13.23.26:888][  0]LogPackageLocalizationCache: Processed 5 localized package path(s) for 2 prioritized culture(s) in 0.039216 seconds
+[2021.07.12-13.23.26:894][  0]LogUObjectArray: 35825 objects as part of root set at end of initial load.
+[2021.07.12-13.23.26:894][  0]LogUObjectAllocator: 7529104 out of 0 bytes used by permanent object pool.
+[2021.07.12-13.23.26:894][  0]LogUObjectArray: CloseDisregardForGC: 0/0 objects in disregard for GC pool
+[2021.07.12-13.23.26:960][  0]LogInit: WinSock: version 1.1 (2.2), MaxSocks=32767, MaxUdp=65467
+[2021.07.12-13.23.30:030][  0]LogTcpMessaging: Initializing TcpMessaging bridge
+[2021.07.12-13.23.30:078][  0]LogUdpMessaging: Initializing bridge on interface 0.0.0.0:0 to multicast group 230.0.0.1:6666.
+[2021.07.12-13.23.30:863][  0]LogMaterial: Uniform references updated for custom material expression Custom.
+[2021.07.12-13.23.31:302][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2021.07.12-13.23.31:302][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2021.07.12-13.23.31:359][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2021.07.12-13.23.31:417][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2021.07.12-13.23.32:124][  0]LogAndroidPermission: UAndroidPermissionCallbackProxy::GetInstance
+[2021.07.12-13.23.32:446][  0]LogOcInput: OculusInput pre-init called
+[2021.07.12-13.23.32:755][  0]LogEngine: Initializing Engine...
+[2021.07.12-13.23.38:308][  0]LogHMD: Failed to initialize OpenVR with code 108
+[2021.07.12-13.23.38:582][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: Construct from data asset -  0.000 s
+[2021.07.12-13.23.38:582][  0]LogStats: UGameplayTagsManager::ConstructGameplayTagTree: GameplayTagTreeChangedEvent.Broadcast -  0.000 s
+[2021.07.12-13.23.38:751][  0]LogAIModule: Creating AISystem for world Untitled
+[2021.07.12-13.23.38:846][  0]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-13.23.38:906][  0]LogInit: FAudioDevice initialized.
+[2021.07.12-13.23.38:984][  0]LogDerivedDataCache: Saved boot cache 0.08s 93MB C:/Users/helirang/AppData/Local/UnrealEngine/4.17/DerivedDataCache/Boot.ddc.
+[2021.07.12-13.23.38:998][  0]LogInit: Texture streaming: Enabled
+[2021.07.12-13.23.39:173][  0]LogEngineSessionManager: EngineSessionManager initialized
+[2021.07.12-13.23.39:463][  0]LogInit: Transaction tracking system initialized
+[2021.07.12-13.23.40:229][  0]BlueprintLog: New page: 에디터 로드
+[2021.07.12-13.23.41:863][  0]LocalizationService: 현지화 서비스가 비활성화되었습니다.
+[2021.07.12-13.23.42:819][  0]LogConsoleResponse: Display: 
+[2021.07.12-13.23.43:057][  0]LogFileCache: Scanning file cache for directory 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/' took 0.01s
+[2021.07.12-13.23.43:057][  0]LogCook: Display: Max memory allowance for cook 16384mb min free memory 0mb
+[2021.07.12-13.23.43:057][  0]LogCook: Display: Mobile HDR setting 1
+[2021.07.12-13.23.43:057][  0]LogGameplayTags: Display: UGameplayTagsManager::DoneAddingNativeTags. DelegateIsBound: 0
+[2021.07.12-13.23.44:653][  0]SourceControl: 소스 콘트롤이 꺼졌습니다.
+[2021.07.12-13.23.44:653][  0]Cmd: MAP LOAD FILE="../../../Engine/Content/Maps/Templates/Template_Default.umap" TEMPLATE=1 SHOWPROGRESS=1 FEATURELEVEL=3
+[2021.07.12-13.23.44:653][  0]LightingResults: New page: 라이팅 빌드
+[2021.07.12-13.23.44:725][  0]MapCheck: New page: 맵 체크
+[2021.07.12-13.23.44:725][  0]LightingResults: New page: 라이팅 빌드
+[2021.07.12-13.23.44:958][  0]LogAIModule: Creating AISystem for world Untitled_1
+[2021.07.12-13.23.44:964][  0]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2021.07.12-13.23.44:985][  0]Cmd: MAP CHECKDEP NOCLEARLOG
+[2021.07.12-13.23.45:060][  0]MapCheck: 맵 체크 완료: 오류 0 회, 경고 0 회, 소요 시간 74.846ms.
+[2021.07.12-13.23.45:060][  0]LogFileHelpers: Loading map 'Template_Default' took 0.407
+[2021.07.12-13.23.45:309][  0]LogCollectionManager: Loaded 0 collections in 0.001581 seconds
+[2021.07.12-13.23.45:425][  0]LogFileCache: Scanning file cache for directory 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Collections/' took 0.01s
+[2021.07.12-13.23.45:425][  0]LogFileCache: Scanning file cache for directory 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Developers/helirang/Collections/' took 0.01s
+[2021.07.12-13.23.45:425][  0]LogFileCache: Scanning file cache for directory 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Collections/' took 0.01s
+[2021.07.12-13.23.45:425][  0]LogCollectionManager: Rebuilt the GUID cache for 0 collections in 0.000000 seconds
+[2021.07.12-13.23.45:436][  0]LogContentBrowser: Native class hierarchy populated in 0.0098 seconds. Added 2387 classes and 502 folders.
+[2021.07.12-13.23.45:529][  0]LogContentBrowser: Native class hierarchy updated for 'WidgetCarousel' in 0.0022 seconds. Added 0 classes and 0 folders.
+[2021.07.12-13.23.45:663][  0]LogContentBrowser: Native class hierarchy updated for 'AddContentDialog' in 0.0026 seconds. Added 0 classes and 0 folders.
+[2021.07.12-13.23.45:739][  0]LogContentBrowser: Native class hierarchy updated for 'SceneOutliner' in 0.0020 seconds. Added 1 classes and 2 folders.
+[2021.07.12-13.23.45:807][  0]LogSlate: Took 0.000423 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2021.07.12-13.23.45:815][  0]LogSlate: Took 0.006869 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/NanumGothic.ttf' (4243K)
+[2021.07.12-13.23.45:817][  0]LogSlate: Took 0.000329 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K)
+[2021.07.12-13.23.45:826][  0]LogSlate: Took 0.001080 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2021.07.12-13.23.45:953][  0]LogRenderer: Reallocating scene render targets to support 1208x576 Format 10 NumSamples 1 (Frame:1).
+[2021.07.12-13.23.46:378][  0]LogContentBrowser: Native class hierarchy updated for 'HierarchicalLODOutliner' in 0.0033 seconds. Added 1 classes and 2 folders.
+[2021.07.12-13.23.46:378][  0]LogLoad: (Engine Initialization) Total time: 28.66 seconds
+[2021.07.12-13.23.46:378][  0]LogLoad: (Engine Initialization) Total Blueprint compile time: 0.00 seconds
+[2021.07.12-13.23.46:378][  0]LogExternalProfiler: No external profilers were discovered.  External profiling features will not be available.
+[2021.07.12-13.23.46:737][  0]LogAssetRegistry: Asset discovery search completed in 21.1237 seconds
+[2021.07.12-13.23.46:739][  0]LogCollectionManager: Rebuilt the object cache for 0 collections in 0.000001 seconds (found 0 objects)
+[2021.07.12-13.23.46:739][  0]LogCollectionManager: Fixed up redirectors for 0 collections in 0.000046 seconds (updated 0 objects)
+[2021.07.12-13.23.46:744][  0]LogContentStreaming: Texture pool size now 1000 MB
+[2021.07.12-16.34.04:162][615]LogSlate: Took 0.000324 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2021.07.12-16.34.16:831][259]LogSlate: Took 0.000305 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2021.07.12-16.34.16:926][259]LogSlate: Took 0.001280 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2021.07.12-16.34.54:648][320]Running D:/UE4/UE_4.17/Engine/Binaries/DotNET/UnrealBuildTool.exe CoopGame Win64 Development -editorrecompile "D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/CoopGame.uproject" -invalidatemakefilesonly
+[2021.07.12-16.34.54:959][320]Invalidating makefiles only in this run.
+[2021.07.12-16.34.55:114][320]Candidate modules for hot reload:
+[2021.07.12-16.34.55:115][320]  CoopGame
+[2021.07.12-16.34.55:115][320]Launching UnrealBuildTool... [D:/UE4/UE_4.17/Engine/Binaries/DotNET/UnrealBuildTool.exe CoopGame -ModuleWithSuffix CoopGame 893 Win64 Development -editorrecompile -canskiplink "D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/CoopGame.uproject" ]
+[2021.07.12-16.34.55:885][320]LogSlate: Took 0.000299 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Regular.ttf' (155K)
+[2021.07.12-16.35.10:941][320]CompilerResultsLog: New page: 컴파일 - 2021. 7. 13. 오전 10:35:10
+[2021.07.12-16.35.10:941][320]CompilerResultsLog: Performing full C++ include scan (hot reloading a new target)
+[2021.07.12-16.35.10:941][320]CompilerResultsLog: Compiling game modules for hot reload
+[2021.07.12-16.35.10:941][320]CompilerResultsLog: Parsing headers for CoopGameEditor
+[2021.07.12-16.35.10:941][320]CompilerResultsLog:   Running UnrealHeaderTool "D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\CoopGame.uproject" "D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\CoopGameEditor\Development\CoopGameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2021.07.12-16.35.10:941][320]CompilerResultsLog: Reflection code generated for CoopGameEditor in 7.2437599 seconds
+[2021.07.12-16.35.10:941][320]CompilerResultsLog: Performing 8 actions (9 in parallel)
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: CoopGame.cpp
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: CoopGameGameModeBase.gen.cpp
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: CoopGame.init.gen.cpp
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: SCharacter.gen.cpp
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: SCharacter.cpp
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: CoopGameGameModeBase.cpp
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: [7/8] Link UE4Editor-CoopGame-893.dll
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: [8/8] Link UE4Editor-CoopGame-893.lib
+[2021.07.12-16.35.10:942][320]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-893.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-893.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-16.35.10:942][320]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-893.suppressed.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-893.suppressed.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-16.35.10:942][320]CompilerResultsLog: Total build time: 15.55 seconds (Local executor: 3.36 seconds)
+[2021.07.12-16.35.10:942][320]LogMainFrame: MainFrame: Module compiling took 15.843 seconds
+[2021.07.12-16.35.11:032][320]LogClass: Could not find existing class SCharacter in package /Script/CoopGame for HotReload, assuming new class
+[2021.07.12-16.35.11:036][320]LogContentBrowser: Native class hierarchy updated for 'CoopGame' in 0.0028 seconds. Added 2 classes and 3 folders.
+[2021.07.12-16.35.11:037][320]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.07.12-16.35.11:131][320]LogContentBrowser: Native class hierarchy populated in 0.0119 seconds. Added 2390 classes and 507 folders.
+[2021.07.12-16.35.11:134][320]Display: HotReload took 16.1s.
+[2021.07.12-16.35.11:136][320]Warning: HotReload operation took 16.1s.
+[2021.07.12-16.35.12:101][320]LogVSAccessor: Warning: Couldn't goto line number '0' in 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Source/CoopGame/Public/SCharacter.h'
+[2021.07.12-16.35.12:209][320]LogVSAccessor: Warning: Couldn't goto line number '0' in 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Source/CoopGame/Private/SCharacter.cpp'
+[2021.07.12-16.35.12:242][320]LogHotReload: New module detected: UE4Editor-CoopGame-893.dll
+[2021.07.12-16.35.12:289][321]LogHotReload: Starting Hot-Reload from IDE
+[2021.07.12-16.35.12:386][321]LogContentBrowser: Native class hierarchy updated for 'CoopGame' in 0.0028 seconds. Added 2 classes and 3 folders.
+[2021.07.12-16.35.12:387][321]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.07.12-16.35.12:399][321]LogContentBrowser: Native class hierarchy populated in 0.0105 seconds. Added 2390 classes and 507 folders.
+[2021.07.12-16.35.12:408][321]Display: HotReload took  0.1s.
+[2021.07.12-16.48.07:270][102]Candidate modules for hot reload:
+[2021.07.12-16.48.07:270][102]  CoopGame
+[2021.07.12-16.48.07:270][102]Launching UnrealBuildTool... [D:/UE4/UE_4.17/Engine/Binaries/DotNET/UnrealBuildTool.exe CoopGame -ModuleWithSuffix CoopGame 6856 Win64 Development -editorrecompile -canskiplink "D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/CoopGame.uproject" ]
+[2021.07.12-16.48.07:280][102]Warning: Starting HotReload took  0.1s.
+[2021.07.12-16.48.18:327][525]LogTemp: Executing iPhonePackager certificates Engine -bundlename com.YourCompany.CoopGame
+[2021.07.12-16.48.18:327][525]LogTemp: CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-16.48.18:327][525]LogTemp: Initial Dir: D:\UE4\UE_4.17
+[2021.07.12-16.48.18:327][525]LogTemp: Env CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-16.48.18:327][525]LogTemp: BranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries --- GameBranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries
+[2021.07.12-16.48.18:327][525]LogTemp: IPP ERROR: Could not find provision directory 'C:\Users\helirang\AppData\Local/Apple Computer/MobileDevice/Provisioning Profiles/'.
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: New page: 컴파일 - 2021. 7. 13. 오전 10:48:23
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: Compiling game modules for hot reload
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: Parsing headers for CoopGameEditor
+[2021.07.12-16.48.23:631][540]CompilerResultsLog:   Running UnrealHeaderTool "D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\CoopGame.uproject" "D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\CoopGameEditor\Development\CoopGameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: Reflection code generated for CoopGameEditor in 7.5000562 seconds
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: Performing 4 actions (9 in parallel)
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: SCharacter.gen.cpp
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: SCharacter.cpp
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: [3/4] Link UE4Editor-CoopGame-6856.dll
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: [4/4] Link UE4Editor-CoopGame-6856.lib
+[2021.07.12-16.48.23:631][540]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-6856.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-6856.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-16.48.23:631][540]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-6856.suppressed.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-6856.suppressed.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-16.48.23:631][540]CompilerResultsLog: Total build time: 15.79 seconds (Local executor: 3.37 seconds)
+[2021.07.12-16.48.23:631][540]LogMainFrame: MainFrame: Module compiling took 16.377 seconds
+[2021.07.12-16.48.23:706][540]LogContentBrowser: Native class hierarchy updated for 'CoopGame' in 0.0026 seconds. Added 2 classes and 3 folders.
+[2021.07.12-16.48.23:708][540]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.07.12-16.48.23:732][540]LogContentBrowser: Native class hierarchy populated in 0.0095 seconds. Added 2390 classes and 507 folders.
+[2021.07.12-16.48.23:732][540]Display: HotReload took 16.5s.
+[2021.07.12-16.54.17:333][404]LogEditorActor: Deleted Actor: PlayerStart
+[2021.07.12-16.54.17:346][404]LogEditorActor: Deleted 1 Actors (0.013 secs)
+[2021.07.12-16.54.22:071][684]LogSlate: Took 0.001358 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2021.07.12-16.55.02:656][708]LogSlate: Took 0.000237 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (159K)
+[2021.07.12-16.55.11:718][735]LogSavePackage: Save=31.09ms
+[2021.07.12-16.55.11:718][735]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Untitled_1_Auto1AE4873B34E15099275F262A761F7913F.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Temp/Untitled_1_Auto1.umap'
+[2021.07.12-16.55.11:720][735]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Temp/Untitled_1_Auto1.umap
+[2021.07.12-16.55.11:722][735]LogFileHelpers: Editor autosave (incl. sublevels) for '/Temp/Untitled_1' took 0.051
+[2021.07.12-16.55.11:722][735]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.051
+[2021.07.12-16.55.11:725][735]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/BluePrints/BP_PlayerPawn] ([1] browsable assets)...
+[2021.07.12-16.55.11:725][735]OBJ SavePackage: Finished generating thumbnails for package [/Game/BluePrints/BP_PlayerPawn]
+[2021.07.12-16.55.11:746][735]LogSavePackage: Save=19.77ms
+[2021.07.12-16.55.11:746][735]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/BP_PlayerPawn_Auto1D4E56C9548C160BD6E79EBB9C4FA30CA.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Game/BluePrints/BP_PlayerPawn_Auto1.uasset'
+[2021.07.12-16.55.11:748][735]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Game/BluePrints/BP_PlayerPawn_Auto1.uasset
+[2021.07.12-16.55.11:748][735]LogFileHelpers: Auto-saving content packages took 0.024
+[2021.07.12-16.55.55:845][946]LogSavePackage: Save=22.43ms
+[2021.07.12-16.55.55:845][946]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/BP_PlayerPawnE0EEECBF4F5EFD5853D70B86D1786F49.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/BluePrints/BP_PlayerPawn.uasset'
+[2021.07.12-16.55.55:848][946]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/BluePrints/BP_PlayerPawn.uasset
+[2021.07.12-16.56.07:309][  6]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-16.56.07:329][  6]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-16.56.07:331][  6]PIE: New page: PIE 세션: Untitled_1 (2021. 7. 13. 오전 10:56:07)
+[2021.07.12-16.56.07:331][  6]LogPlayLevel: Creating play world package: /Temp/UEDPIE_0_Untitled_1
+[2021.07.12-16.56.07:336][  6]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004453s)
+[2021.07.12-16.56.07:338][  6]LogAIModule: Creating AISystem for world Untitled_1
+[2021.07.12-16.56.07:338][  6]LogPlayLevel: PIE: World Init took: (0.002204s)
+[2021.07.12-16.56.07:339][  6]LogPlayLevel: PIE: Created PIE world by copying editor world from /Temp/Untitled_1.Untitled_1 to /Temp/UEDPIE_0_Untitled_1.Untitled_1 (0.007767s)
+[2021.07.12-16.56.07:427][  6]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-16.56.07:456][  6]LogInit: FAudioDevice initialized.
+[2021.07.12-16.56.07:503][  6]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-16.56.07:510][  6]LogWorld: Bringing World /Temp/UEDPIE_0_Untitled_1.Untitled_1 up for play (max tick rate 60) at 2021.07.13-01.56.07
+[2021.07.12-16.56.07:512][  6]LogWorld: Bringing up level for play took: 0.003350
+[2021.07.12-16.56.07:583][  6]LogContentBrowser: Native class hierarchy updated for 'MovieSceneCapture' in 0.0030 seconds. Added 11 classes and 0 folders.
+[2021.07.12-16.56.07:585][  6]PIE: /Temp/UEDPIE_0_Untitled_1 에 대한 에디터에서 플레이 시작 시간: 1.057
+[2021.07.12-16.56.16:196][436]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2021.07.12-16.56.27:099][893]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-16.56.27:111][893]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-16.56.27:111][893]PIE: New page: PIE 세션: Untitled_1 (2021. 7. 13. 오전 10:56:27)
+[2021.07.12-16.56.27:111][893]LogPlayLevel: Creating play world package: /Temp/UEDPIE_0_Untitled_1
+[2021.07.12-16.56.27:112][893]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001512s)
+[2021.07.12-16.56.27:114][893]LogAIModule: Creating AISystem for world Untitled_1
+[2021.07.12-16.56.27:114][893]LogPlayLevel: PIE: World Init took: (0.001824s)
+[2021.07.12-16.56.27:115][893]LogPlayLevel: PIE: Created PIE world by copying editor world from /Temp/Untitled_1.Untitled_1 to /Temp/UEDPIE_0_Untitled_1.Untitled_1 (0.003660s)
+[2021.07.12-16.56.27:202][893]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-16.56.27:226][893]LogInit: FAudioDevice initialized.
+[2021.07.12-16.56.27:258][893]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-16.56.27:259][893]LogWorld: Bringing World /Temp/UEDPIE_0_Untitled_1.Untitled_1 up for play (max tick rate 60) at 2021.07.13-01.56.27
+[2021.07.12-16.56.27:259][893]LogWorld: Bringing up level for play took: 0.000885
+[2021.07.12-16.56.27:260][893]PIE: /Temp/UEDPIE_0_Untitled_1 에 대한 에디터에서 플레이 시작 시간: 0.732
+[2021.07.12-16.56.38:807][425]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-16.56.38:814][425]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-16.56.38:814][425]PIE: New page: PIE 세션: Untitled_1 (2021. 7. 13. 오전 10:56:38)
+[2021.07.12-16.56.38:814][425]LogPlayLevel: Creating play world package: /Temp/UEDPIE_0_Untitled_1
+[2021.07.12-16.56.38:817][425]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002496s)
+[2021.07.12-16.56.38:817][425]LogAIModule: Creating AISystem for world Untitled_1
+[2021.07.12-16.56.38:817][425]LogPlayLevel: PIE: World Init took: (0.000788s)
+[2021.07.12-16.56.38:818][425]LogPlayLevel: PIE: Created PIE world by copying editor world from /Temp/Untitled_1.Untitled_1 to /Temp/UEDPIE_0_Untitled_1.Untitled_1 (0.003622s)
+[2021.07.12-16.56.38:897][425]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-16.56.38:922][425]LogInit: FAudioDevice initialized.
+[2021.07.12-16.56.38:956][425]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-16.56.38:958][425]LogWorld: Bringing World /Temp/UEDPIE_0_Untitled_1.Untitled_1 up for play (max tick rate 60) at 2021.07.13-01.56.38
+[2021.07.12-16.56.38:958][425]LogWorld: Bringing up level for play took: 0.000967
+[2021.07.12-16.56.38:959][425]PIE: /Temp/UEDPIE_0_Untitled_1 에 대한 에디터에서 플레이 시작 시간: 0.43
+[2021.07.12-16.56.48:113][967]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-16.56.48:120][967]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-16.56.48:120][967]PIE: New page: PIE 세션: Untitled_1 (2021. 7. 13. 오전 10:56:48)
+[2021.07.12-16.56.48:120][967]LogPlayLevel: Creating play world package: /Temp/UEDPIE_0_Untitled_1
+[2021.07.12-16.56.48:122][967]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001266s)
+[2021.07.12-16.56.48:123][967]LogAIModule: Creating AISystem for world Untitled_1
+[2021.07.12-16.56.48:123][967]LogPlayLevel: PIE: World Init took: (0.000887s)
+[2021.07.12-16.56.48:123][967]LogPlayLevel: PIE: Created PIE world by copying editor world from /Temp/Untitled_1.Untitled_1 to /Temp/UEDPIE_0_Untitled_1.Untitled_1 (0.002426s)
+[2021.07.12-16.56.48:202][967]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-16.56.48:227][967]LogInit: FAudioDevice initialized.
+[2021.07.12-16.56.48:255][967]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-16.56.48:257][967]LogWorld: Bringing World /Temp/UEDPIE_0_Untitled_1.Untitled_1 up for play (max tick rate 60) at 2021.07.13-01.56.48
+[2021.07.12-16.56.48:257][967]LogWorld: Bringing up level for play took: 0.000921
+[2021.07.12-16.56.48:258][967]PIE: /Temp/UEDPIE_0_Untitled_1 에 대한 에디터에서 플레이 시작 시간: -0.271
+[2021.07.12-16.57.03:146][614]LogTemp: Executing iPhonePackager certificates Engine -bundlename com.YourCompany.CoopGame
+[2021.07.12-16.57.03:146][614]LogTemp: CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-16.57.03:146][614]LogTemp: Initial Dir: D:\UE4\UE_4.17
+[2021.07.12-16.57.03:146][614]LogTemp: Env CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-16.57.03:146][614]LogTemp: BranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries --- GameBranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries
+[2021.07.12-16.57.03:180][616]LogTemp: IPP ERROR: Could not find provision directory 'C:\Users\helirang\AppData\Local/Apple Computer/MobileDevice/Provisioning Profiles/'.
+[2021.07.12-16.57.53:361][549]Candidate modules for hot reload:
+[2021.07.12-16.57.53:361][549]  CoopGame
+[2021.07.12-16.57.53:361][549]Launching UnrealBuildTool... [D:/UE4/UE_4.17/Engine/Binaries/DotNET/UnrealBuildTool.exe CoopGame -ModuleWithSuffix CoopGame 546 Win64 Development -editorrecompile -canskiplink "D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/CoopGame.uproject" ]
+[2021.07.12-16.57.53:368][549]Warning: Starting HotReload took  0.0s.
+[2021.07.12-16.58.01:509][657]CompilerResultsLog: New page: 컴파일 - 2021. 7. 13. 오전 10:58:01
+[2021.07.12-16.58.01:509][657]CompilerResultsLog: Compiling game modules for hot reload
+[2021.07.12-16.58.01:509][657]CompilerResultsLog: Performing 3 actions (9 in parallel)
+[2021.07.12-16.58.01:509][657]CompilerResultsLog: SCharacter.cpp
+[2021.07.12-16.58.01:509][657]CompilerResultsLog: [2/3] Link UE4Editor-CoopGame-546.dll
+[2021.07.12-16.58.01:509][657]CompilerResultsLog: [3/3] Link UE4Editor-CoopGame-546.lib
+[2021.07.12-16.58.01:509][657]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-546.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-546.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-16.58.01:509][657]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-546.suppressed.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-546.suppressed.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-16.58.01:509][657]CompilerResultsLog: Total build time: 7.68 seconds (Local executor: 3.38 seconds)
+[2021.07.12-16.58.01:509][657]LogMainFrame: MainFrame: Module compiling took 8.157 seconds
+[2021.07.12-16.58.01:592][657]LogContentBrowser: Native class hierarchy updated for 'CoopGame' in 0.0026 seconds. Added 2 classes and 3 folders.
+[2021.07.12-16.58.01:592][657]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.07.12-16.58.01:615][657]LogContentBrowser: Native class hierarchy populated in 0.0091 seconds. Added 2390 classes and 507 folders.
+[2021.07.12-16.58.01:615][657]Display: HotReload took  8.3s.
+[2021.07.12-16.59.23:406][971]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-16.59.23:413][971]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-16.59.23:413][971]PIE: New page: PIE 세션: Untitled_1 (2021. 7. 13. 오전 10:59:23)
+[2021.07.12-16.59.23:413][971]LogPlayLevel: Creating play world package: /Temp/UEDPIE_0_Untitled_1
+[2021.07.12-16.59.23:415][971]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001833s)
+[2021.07.12-16.59.23:416][971]LogAIModule: Creating AISystem for world Untitled_1
+[2021.07.12-16.59.23:417][971]LogPlayLevel: PIE: World Init took: (0.001433s)
+[2021.07.12-16.59.23:417][971]LogPlayLevel: PIE: Created PIE world by copying editor world from /Temp/Untitled_1.Untitled_1 to /Temp/UEDPIE_0_Untitled_1.Untitled_1 (0.003689s)
+[2021.07.12-16.59.23:502][971]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-16.59.23:527][971]LogInit: FAudioDevice initialized.
+[2021.07.12-16.59.23:562][971]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-16.59.23:564][971]LogWorld: Bringing World /Temp/UEDPIE_0_Untitled_1.Untitled_1 up for play (max tick rate 60) at 2021.07.13-01.59.23
+[2021.07.12-16.59.23:565][971]LogWorld: Bringing up level for play took: 0.001105
+[2021.07.12-16.59.23:565][971]PIE: /Temp/UEDPIE_0_Untitled_1 에 대한 에디터에서 플레이 시작 시간: 1.037
+[2021.07.12-17.05.38:893][484]LogSavePackage: Save=25.79ms
+[2021.07.12-17.05.38:893][484]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Untitled_1_Auto2FE5B9CC44F25FEB2C48053B3638AAD31.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Temp/Untitled_1_Auto2.umap'
+[2021.07.12-17.05.38:894][484]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Temp/Untitled_1_Auto2.umap
+[2021.07.12-17.05.38:896][484]LogFileHelpers: Editor autosave (incl. sublevels) for '/Temp/Untitled_1' took 0.045
+[2021.07.12-17.05.38:896][484]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.045
+[2021.07.12-17.33.49:130][724]LogTemp: Executing iPhonePackager certificates Engine -bundlename com.YourCompany.CoopGame
+[2021.07.12-17.33.49:130][724]LogTemp: CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-17.33.49:130][724]LogTemp: Initial Dir: D:\UE4\UE_4.17
+[2021.07.12-17.33.49:130][724]LogTemp: Env CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-17.33.49:130][724]LogTemp: BranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries --- GameBranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries
+[2021.07.12-17.33.49:164][726]LogTemp: IPP ERROR: Could not find provision directory 'C:\Users\helirang\AppData\Local/Apple Computer/MobileDevice/Provisioning Profiles/'.
+[2021.07.12-17.34.47:658][540]Candidate modules for hot reload:
+[2021.07.12-17.34.47:658][540]  CoopGame
+[2021.07.12-17.34.47:658][540]Launching UnrealBuildTool... [D:/UE4/UE_4.17/Engine/Binaries/DotNET/UnrealBuildTool.exe CoopGame -ModuleWithSuffix CoopGame 5938 Win64 Development -editorrecompile -canskiplink "D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/CoopGame.uproject" ]
+[2021.07.12-17.34.47:667][540]Warning: Starting HotReload took  0.0s.
+[2021.07.12-17.34.55:953][615]CompilerResultsLog: New page: 컴파일 - 2021. 7. 13. 오전 11:34:55
+[2021.07.12-17.34.55:953][615]CompilerResultsLog: Compiling game modules for hot reload
+[2021.07.12-17.34.55:953][615]CompilerResultsLog: Performing 3 actions (9 in parallel)
+[2021.07.12-17.34.55:953][615]CompilerResultsLog: SCharacter.cpp
+[2021.07.12-17.34.55:953][615]CompilerResultsLog: [2/3] Link UE4Editor-CoopGame-5938.dll
+[2021.07.12-17.34.55:953][615]CompilerResultsLog: [3/3] Link UE4Editor-CoopGame-5938.lib
+[2021.07.12-17.34.55:953][615]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-5938.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-5938.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-17.34.55:953][615]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-5938.suppressed.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-5938.suppressed.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-17.34.55:953][615]CompilerResultsLog: Total build time: 7.89 seconds (Local executor: 3.34 seconds)
+[2021.07.12-17.34.55:953][615]LogMainFrame: MainFrame: Module compiling took 8.309 seconds
+[2021.07.12-17.34.56:033][615]LogContentBrowser: Native class hierarchy updated for 'CoopGame' in 0.0030 seconds. Added 2 classes and 3 folders.
+[2021.07.12-17.34.56:034][615]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.07.12-17.34.56:063][615]LogContentBrowser: Native class hierarchy populated in 0.0108 seconds. Added 2390 classes and 507 folders.
+[2021.07.12-17.34.56:063][615]Display: HotReload took  8.4s.
+[2021.07.12-17.35.59:828][744]LogSavePackage: Save=27.62ms
+[2021.07.12-17.35.59:828][744]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/P_TestMapDF43C3FE41459D14EDD687A43CC03408.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Maps/P_TestMap.umap'
+[2021.07.12-17.35.59:831][744]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Maps/P_TestMap.umap
+[2021.07.12-17.35.59:841][744]LogFileHelpers: Saving map 'P_TestMap' took 0.647
+[2021.07.12-17.36.02:696][914]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-17.36.02:706][914]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-17.36.02:706][914]PIE: New page: PIE 세션: P_TestMap (2021. 7. 13. 오전 11:36:02)
+[2021.07.12-17.36.02:706][914]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_P_TestMap
+[2021.07.12-17.36.02:710][914]LogPlayLevel: PIE: StaticDuplicateObject took: (0.003448s)
+[2021.07.12-17.36.02:711][914]LogAIModule: Creating AISystem for world P_TestMap
+[2021.07.12-17.36.02:711][914]LogPlayLevel: PIE: World Init took: (0.001439s)
+[2021.07.12-17.36.02:711][914]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/P_TestMap.P_TestMap to /Game/Maps/UEDPIE_0_P_TestMap.P_TestMap (0.005129s)
+[2021.07.12-17.36.02:798][914]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-17.36.02:826][914]LogInit: FAudioDevice initialized.
+[2021.07.12-17.36.02:863][914]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-17.36.02:865][914]LogWorld: Bringing World /Game/Maps/UEDPIE_0_P_TestMap.P_TestMap up for play (max tick rate 60) at 2021.07.13-02.36.02
+[2021.07.12-17.36.02:866][914]LogWorld: Bringing up level for play took: 0.001330
+[2021.07.12-17.36.02:867][914]PIE: /Game/Maps/UEDPIE_0_P_TestMap 에 대한 에디터에서 플레이 시작 시간: 0.338
+[2021.07.12-17.36.18:940][667]LogTemp: Executing iPhonePackager certificates Engine -bundlename com.YourCompany.CoopGame
+[2021.07.12-17.36.18:940][667]LogTemp: CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-17.36.18:940][667]LogTemp: Initial Dir: D:\UE4\UE_4.17
+[2021.07.12-17.36.18:940][667]LogTemp: Env CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-17.36.18:940][667]LogTemp: BranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries --- GameBranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries
+[2021.07.12-17.36.18:940][667]LogTemp: IPP ERROR: Could not find provision directory 'C:\Users\helirang\AppData\Local/Apple Computer/MobileDevice/Provisioning Profiles/'.
+[2021.07.12-17.36.39:281][120]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-17.36.39:297][120]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-17.36.39:297][120]PIE: New page: PIE 세션: P_TestMap (2021. 7. 13. 오전 11:36:39)
+[2021.07.12-17.36.39:297][120]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_P_TestMap
+[2021.07.12-17.36.39:299][120]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001767s)
+[2021.07.12-17.36.39:300][120]LogAIModule: Creating AISystem for world P_TestMap
+[2021.07.12-17.36.39:300][120]LogPlayLevel: PIE: World Init took: (0.000901s)
+[2021.07.12-17.36.39:300][120]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/P_TestMap.P_TestMap to /Game/Maps/UEDPIE_0_P_TestMap.P_TestMap (0.003005s)
+[2021.07.12-17.36.39:387][120]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-17.36.39:412][120]LogInit: FAudioDevice initialized.
+[2021.07.12-17.36.39:445][120]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-17.36.39:447][120]LogWorld: Bringing World /Game/Maps/UEDPIE_0_P_TestMap.P_TestMap up for play (max tick rate 60) at 2021.07.13-02.36.39
+[2021.07.12-17.36.39:447][120]LogWorld: Bringing up level for play took: 0.000970
+[2021.07.12-17.36.39:448][120]PIE: /Game/Maps/UEDPIE_0_P_TestMap 에 대한 에디터에서 플레이 시작 시간: 0.92
+[2021.07.12-17.36.56:726][149]Cmd: SELECT NONE
+[2021.07.12-17.37.14:805][293]LogTemp: Executing iPhonePackager certificates Engine -bundlename com.YourCompany.CoopGame
+[2021.07.12-17.37.14:805][293]LogTemp: CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-17.37.14:805][293]LogTemp: Initial Dir: D:\UE4\UE_4.17
+[2021.07.12-17.37.14:805][293]LogTemp: Env CWD: D:\UE4\UE_4.17\Engine\Binaries\DotNET\IOS
+[2021.07.12-17.37.14:805][293]LogTemp: BranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries --- GameBranchPath = DESKTOP-0H274VF/D/UE4/UE_4.17/Engine/Binaries
+[2021.07.12-17.37.14:823][294]LogTemp: IPP ERROR: Could not find provision directory 'C:\Users\helirang\AppData\Local/Apple Computer/MobileDevice/Provisioning Profiles/'.
+[2021.07.12-17.38.17:936][788]LogTemp: Repeating last play command: 선택된 뷰포트
+[2021.07.12-17.38.17:944][788]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.07.12-17.38.17:944][788]PIE: New page: PIE 세션: P_TestMap (2021. 7. 13. 오전 11:38:17)
+[2021.07.12-17.38.17:944][788]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_P_TestMap
+[2021.07.12-17.38.17:946][788]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001936s)
+[2021.07.12-17.38.17:947][788]LogAIModule: Creating AISystem for world P_TestMap
+[2021.07.12-17.38.17:947][788]LogPlayLevel: PIE: World Init took: (0.000895s)
+[2021.07.12-17.38.17:947][788]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/P_TestMap.P_TestMap to /Game/Maps/UEDPIE_0_P_TestMap.P_TestMap (0.003136s)
+[2021.07.12-17.38.18:020][788]LogInit: XAudio2 using 'Headphones(High Definition Audio Device)' : 2 channels at 48 kHz using 16 bits per sample (channel mask 0x3)
+[2021.07.12-17.38.18:048][788]LogInit: FAudioDevice initialized.
+[2021.07.12-17.38.18:082][788]LogLoad: Game class is 'GameModeBase'
+[2021.07.12-17.38.18:084][788]LogWorld: Bringing World /Game/Maps/UEDPIE_0_P_TestMap.P_TestMap up for play (max tick rate 60) at 2021.07.13-02.38.18
+[2021.07.12-17.38.18:084][788]LogWorld: Bringing up level for play took: 0.000977
+[2021.07.12-17.38.18:085][788]PIE: /Game/Maps/UEDPIE_0_P_TestMap 에 대한 에디터에서 플레이 시작 시간: -0.443
+[2021.07.12-17.58.21:734][980]Candidate modules for hot reload:
+[2021.07.12-17.58.21:734][980]  CoopGame
+[2021.07.12-17.58.21:734][980]Launching UnrealBuildTool... [D:/UE4/UE_4.17/Engine/Binaries/DotNET/UnrealBuildTool.exe CoopGame -ModuleWithSuffix CoopGame 220 Win64 Development -editorrecompile -canskiplink "D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/CoopGame.uproject" ]
+[2021.07.12-17.58.21:741][980]Warning: Starting HotReload took  0.0s.
+[2021.07.12-17.58.24:488][119]LogContentBrowser: Native class hierarchy updated for 'BlueprintGraph' in 0.0030 seconds. Added 113 classes and 0 folders.
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: New page: 컴파일 - 2021. 7. 13. 오전 11:58:37
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: Compiling game modules for hot reload
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: Parsing headers for CoopGameEditor
+[2021.07.12-17.58.37:272][323]CompilerResultsLog:   Running UnrealHeaderTool "D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\CoopGame.uproject" "D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\CoopGameEditor\Development\CoopGameEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: Reflection code generated for CoopGameEditor in 7.2614726 seconds
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: Performing 5 actions (9 in parallel)
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: SCharacter.gen.cpp
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: SCharacter.cpp
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: CoopGame.init.gen.cpp
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: [4/5] Link UE4Editor-CoopGame-220.dll
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: [5/5] Link UE4Editor-CoopGame-220.lib
+[2021.07.12-17.58.37:272][323]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-220.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-220.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-17.58.37:272][323]CompilerResultsLog:    D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-220.suppressed.lib ???̺귯?? ?? D:\UE4PROJECT\NowProject\Udemy_MultiPractice\MultiPractice_2_Alpa\CoopGame\Intermediate\Build\Win64\UE4Editor\Development\UE4Editor-CoopGame-220.suppressed.exp ??ü?? ?????ϰ? ?ֽ??ϴ?.
+[2021.07.12-17.58.37:272][323]CompilerResultsLog: Total build time: 15.24 seconds (Local executor: 3.15 seconds)
+[2021.07.12-17.58.37:272][323]LogMainFrame: MainFrame: Module compiling took 15.550 seconds
+[2021.07.12-17.58.37:355][323]LogClass: Could not find existing class SCharacter in package /Script/CoopGame for HotReload, assuming new class
+[2021.07.12-17.58.37:360][323]LogHotReload: Re-instancing SCharacter after hot-reload.
+[2021.07.12-17.58.37:520][323]LogContentBrowser: Native class hierarchy updated for 'CoopGame' in 0.0026 seconds. Added 2 classes and 3 folders.
+[2021.07.12-17.58.37:523][323]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.07.12-17.58.37:730][323]LogContentBrowser: Native class hierarchy populated in 0.0094 seconds. Added 2390 classes and 507 folders.
+[2021.07.12-17.58.37:730][323]Display: HotReload took 16.0s.
+[2021.07.12-17.58.44:964][539]LogRenderer: Reallocating scene render targets to support 1208x900 Format 10 NumSamples 1 (Frame:1).
+[2021.07.12-18.00.18:666][655]BlueprintLog: New page: BP_PlayerPawn 컴파일
+[2021.07.12-18.00.53:891][239]LogSavePackage: Save=25.84ms
+[2021.07.12-18.00.53:891][239]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/P_TestMap_Auto3C47C8C3F430C44D017F9BEBF16188F65.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Game/Maps/P_TestMap_Auto3.umap'
+[2021.07.12-18.00.53:892][239]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Game/Maps/P_TestMap_Auto3.umap
+[2021.07.12-18.00.53:893][239]LogFileHelpers: Editor autosave (incl. sublevels) for '/Game/Maps/P_TestMap' took 0.071
+[2021.07.12-18.00.53:893][239]LogFileHelpers: Editor autosave (incl. sublevels) for all levels took 0.071
+[2021.07.12-18.00.53:896][239]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/BluePrints/BP_PlayerPawn] ([1] browsable assets)...
+[2021.07.12-18.00.53:896][239]OBJ SavePackage: Finished generating thumbnails for package [/Game/BluePrints/BP_PlayerPawn]
+[2021.07.12-18.00.53:921][239]LogSavePackage: Save=22.26ms
+[2021.07.12-18.00.53:921][239]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/BP_PlayerPawn_Auto39018B2764D1A0C7EECE08D99417FB550.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Game/BluePrints/BP_PlayerPawn_Auto3.uasset'
+[2021.07.12-18.00.53:922][239]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Autosaves/Game/BluePrints/BP_PlayerPawn_Auto3.uasset
+[2021.07.12-18.00.53:922][239]LogFileHelpers: Auto-saving content packages took 0.027
+[2021.07.12-18.00.54:458][267]LogSavePackage: Save=24.72ms
+[2021.07.12-18.00.54:458][267]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/P_TestMap50534F094441BF60DB1F768BB0313CF9.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Maps/P_TestMap.umap'
+[2021.07.12-18.00.54:460][267]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Maps/P_TestMap.umap
+[2021.07.12-18.00.54:480][267]LogSavePackage: Save=9.04ms
+[2021.07.12-18.00.54:480][267]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/P_TestMap_BuiltData1A9C54144730C079095703A096589B44.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Maps/P_TestMap_BuiltData.uasset'
+[2021.07.12-18.00.54:481][267]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Maps/P_TestMap_BuiltData.uasset
+[2021.07.12-18.01.12:050][529]LogSavePackage: Save=23.74ms
+[2021.07.12-18.01.12:050][529]LogSavePackage: Moving '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/BP_PlayerPawn644B359F4B79881901B1B3A3F5C9026B.tmp' to '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/BluePrints/BP_PlayerPawn.uasset'
+[2021.07.12-18.01.12:053][529]LogSavePackage: Display: Finished SavePackage ../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/BluePrints/BP_PlayerPawn.uasset
+[2021.07.12-18.01.12:313][530]Cmd: QUIT_EDITOR
+[2021.07.12-18.01.12:530][530]LogWindowsTextInputMethodSystem: Display: IME system now activated using TSF (Microsoft 입력기).
+[2021.07.12-18.01.12:545][530]LogExit: Preparing to exit.
+[2021.07.12-18.01.12:854][530]LogDirectoryWatcher: A directory notification for 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/' was aborted.
+[2021.07.12-18.01.12:923][530]LogExit: Editor shut down
+[2021.07.12-18.01.12:937][530]LogExit: Transaction tracking system shut down
+[2021.07.12-18.01.13:025][530]LogDirectoryWatcher: A directory notification for '../../../Engine/Content/' was aborted.
+[2021.07.12-18.01.13:025][530]LogDirectoryWatcher: A directory notification for '../../../../../UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/' was aborted.
+[2021.07.12-18.01.13:025][530]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/2D/Paper2D/Content/' was aborted.
+[2021.07.12-18.01.13:025][530]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/Runtime/Oculus/OculusVR/Content/' was aborted.
+[2021.07.12-18.01.13:025][530]LogDirectoryWatcher: A directory notification for '../../../Engine/Plugins/Runtime/Steam/SteamVR/Content/' was aborted.
+[2021.07.12-18.01.13:129][530]LogExit: Object subsystem successfully closed.
+[2021.07.12-18.01.13:160][530]LogD3D11RHI: Shutdown
+[2021.07.12-18.01.13:161][530]LogD3D11RHI: CleanupD3DDevice
+[2021.07.12-18.01.13:373][530]LogD3D11RHI: ~FD3D11DynamicRHI
+[2021.07.12-18.01.13:383][530]LogModuleManager: Shutting down and abandoning module CoopGame (546)
+[2021.07.12-18.01.13:383][530]LogModuleManager: Shutting down and abandoning module BlueprintGraph (545)
+[2021.07.12-18.01.13:383][530]LogModuleManager: Shutting down and abandoning module BlueprintProfiler (543)
+[2021.07.12-18.01.13:384][530]LogModuleManager: Shutting down and abandoning module MovieSceneCapture (539)
+[2021.07.12-18.01.13:384][530]LogModuleManager: Shutting down and abandoning module ExternalImagePicker (536)
+[2021.07.12-18.01.13:384][530]LogModuleManager: Shutting down and abandoning module HierarchicalLODOutliner (532)
+[2021.07.12-18.01.13:384][530]LogModuleManager: Shutting down and abandoning module SceneOutliner (530)
+[2021.07.12-18.01.13:384][530]LogModuleManager: Shutting down and abandoning module AddContentDialog (528)
+[2021.07.12-18.01.13:385][530]LogDirectoryWatcher: A directory notification for 'D:/UE4/UE_4.17/FeaturePacks/' was aborted.
+[2021.07.12-18.01.13:390][530]LogModuleManager: Shutting down and abandoning module WidgetCarousel (527)
+[2021.07.12-18.01.13:390][530]LogModuleManager: Shutting down and abandoning module EditorWidgets (524)
+[2021.07.12-18.01.13:390][530]LogModuleManager: Shutting down and abandoning module CollectionManager (522)
+[2021.07.12-18.01.13:390][530]LogDirectoryWatcher: A directory notification for 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Collections/' was aborted.
+[2021.07.12-18.01.13:391][530]LogDirectoryWatcher: A directory notification for 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Content/Developers/helirang/Collections/' was aborted.
+[2021.07.12-18.01.13:391][530]LogDirectoryWatcher: A directory notification for 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Saved/Collections/' was aborted.
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module StatsViewer (520)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module FoliageEdit (518)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module LandscapeEditor (516)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module MeshPaintMode (514)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module SceneDepthPickerMode (512)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module ActorPickerMode (510)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module GeometryMode (508)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module TextureAlignMode (506)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module BspMode (504)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module PIEPreviewDeviceProfileSelector (502)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module HardwareSurvey (500)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module SequenceRecorderSections (498)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module AutomationWorker (496)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module MatineeToLevelSequence (494)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module LevelSequenceEditor (492)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module PlacementMode (491)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module WmfMediaFactory (488)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module WmfMediaEditor (486)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module AvfMediaFactory (484)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module AvfMediaEditor (482)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module AndroidMediaFactory (480)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module Media (479)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module AndroidMediaEditor (476)
+[2021.07.12-18.01.13:391][530]LogModuleManager: Shutting down and abandoning module CharacterAI (474)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module AudioCapture (472)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module SequenceRecorder (471)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module SmartSnapping (468)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module SessionServices (466)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module ViewportSnapping (464)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module ViewportInteraction (462)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module ClothPainter (460)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module LogVisualizer (458)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module IntroTutorials (456)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module GameProjectGeneration (455)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module IOSPlatformEditor (452)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module HTML5PlatformEditor (450)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module AndroidPlatformEditor (448)
+[2021.07.12-18.01.13:392][530]LogModuleManager: Shutting down and abandoning module AndroidDeviceDetection (447)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module WindowsPlatformEditor (444)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module IOSRuntimeSettings (442)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module AndroidRuntimeSettings (440)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module InputBindingEditor (438)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module MergeActors (436)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module SizeMap (434)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module TreeMap (432)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module ReferenceViewer (430)
+[2021.07.12-18.01.14:231][530]LogModuleManager: Shutting down and abandoning module LocalizationDashboard (428)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module LocalizationService (427)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module HardwareTargeting (424)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module DeviceProfileEditor (422)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module UndoHistory (420)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module XmlParser (418)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module Blutility (416)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module ProjectSettingsViewer (414)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module ProjectTargetPlatformEditor (413)
+[2021.07.12-18.01.14:232][530]LogModuleManager: Shutting down and abandoning module EditorSettingsViewer (410)
+[2021.07.12-18.01.14:233][530]LogModuleManager: Shutting down and abandoning module SettingsEditor (408)
+[2021.07.12-18.01.14:233][530]LogModuleManager: Shutting down and abandoning module ProjectLauncher (406)
+[2021.07.12-18.01.14:233][530]LogModuleManager: Shutting down and abandoning module SessionFrontend (404)
+[2021.07.12-18.01.14:233][530]LogModuleManager: Shutting down and abandoning module ProfilerClient (402)
+[2021.07.12-18.01.14:233][530]LogModuleManager: Shutting down and abandoning module DeviceManager (400)
+[2021.07.12-18.01.14:233][530]LogModuleManager: Shutting down and abandoning module TargetDeviceServices (399)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module AutomationController (396)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module AutomationWindow (394)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module Layers (392)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module ComponentVisualizers (390)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module DetailCustomizations (388)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module PackagesDialog (386)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module Persona (384)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module AdvancedPreviewScene (383)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module AnimGraph (381)
+[2021.07.12-18.01.14:287][530]LogModuleManager: Shutting down and abandoning module Kismet (378)
+[2021.07.12-18.01.14:292][530]LogModuleManager: Shutting down and abandoning module ClassViewer (376)
+[2021.07.12-18.01.14:294][530]LogModuleManager: Shutting down and abandoning module Toolbox (374)
+[2021.07.12-18.01.14:294][530]LogModuleManager: Shutting down and abandoning module ModuleUI (372)
+[2021.07.12-18.01.14:294][530]LogModuleManager: Shutting down and abandoning module MovieSceneTools (370)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module OutputLog (368)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module GammaUI (366)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module Documentation (364)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module MovieSceneTracks (362)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module MovieScene (360)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module Niagara (358)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module NiagaraEditor (357)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module StreamingPauseRendering (354)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module LauncherPlatform (352)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module AnalyticsET (350)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module PortalServices (348)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module PortalRpc (346)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module MessagingRpc (344)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module AIModule (342)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module GameplayDebugger (341)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module AITestSuite (339)
+[2021.07.12-18.01.14:295][530]LogModuleManager: Shutting down and abandoning module ProfilerService (336)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module TaskGraph (334)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module SteamVRController (332)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponentEditor (330)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module ProceduralMeshComponent (328)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module OculusInput (326)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module MobilePatchingUtils (324)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module CustomMeshComponent (322)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module CableComponent (320)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module ArchVisCharacter (318)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module AndroidPermission (316)
+[2021.07.12-18.01.14:296][530]LogModuleManager: Shutting down and abandoning module MediaPlayerEditor (312)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module HTML5Networking (310)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module AlembicImporter (308)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module AlembicLibrary (307)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module GeometryCache (306)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module GeometryCacheEd (305)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module SpeedTreeImporter (300)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module PluginBrowser (298)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module MobileLauncherProfileWizard (296)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module VisualStudioSourceCodeAccess (294)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module DesktopPlatform (293)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module UObjectPlugin (290)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module SubversionSourceControl (288)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module PerforceSourceControl (286)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module GitSourceControl (284)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module SourceControl (283)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeEditor (280)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module PaperTiledImporter (278)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module PaperSpriteSheetImporter (276)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module Paper2DEditor (274)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module MeshPaint (273)
+[2021.07.12-18.01.14:297][530]LogModuleManager: Shutting down and abandoning module LevelEditor (271)
+[2021.07.12-18.01.14:298][530]LogModuleManager: Shutting down and abandoning module PixelInspectorModule (270)
+[2021.07.12-18.01.14:298][530]LogModuleManager: Shutting down and abandoning module MainFrame (268)
+[2021.07.12-18.01.14:298][530]LogModuleManager: Shutting down and abandoning module HotReload (267)
+[2021.07.12-18.01.14:298][530]LogDirectoryWatcher: A directory notification for 'D:/UE4PROJECT/NowProject/Udemy_MultiPractice/MultiPractice_2_Alpa/CoopGame/Binaries/Win64' was aborted.
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module RuntimePhysXCooking (260)
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module PhysXVehiclesEditor (258)
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module PhysXVehicles (256)
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module OculusEditor (254)
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module LocationServicesBPLibrary (252)
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module ImmediatePhysicsEditor (250)
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module ImmediatePhysics (248)
+[2021.07.12-18.01.14:299][530]LogModuleManager: Shutting down and abandoning module UdpMessaging (246)
+[2021.07.12-18.01.14:400][530]LogModuleManager: Shutting down and abandoning module TcpMessaging (244)
+[2021.07.12-18.01.14:500][530]LogModuleManager: Shutting down and abandoning module GameplayTagsEditor (242)
+[2021.07.12-18.01.14:500][530]LogModuleManager: Shutting down and abandoning module FacialAnimationEditor (240)
+[2021.07.12-18.01.14:500][530]LogModuleManager: Shutting down and abandoning module FacialAnimation (238)
+[2021.07.12-18.01.14:500][530]LogModuleManager: Shutting down and abandoning module AssetManagerEditor (236)
+[2021.07.12-18.01.14:500][530]LogModuleManager: Shutting down and abandoning module GraphEditor (235)
+[2021.07.12-18.01.14:500][530]LogModuleManager: Shutting down and abandoning module ContentBrowser (233)
+[2021.07.12-18.01.14:501][530]LogModuleManager: Shutting down and abandoning module LightPropagationVolumeRuntime (230)
+[2021.07.12-18.01.14:501][530]LogModuleManager: Shutting down and abandoning module Paper2D (228)
+[2021.07.12-18.01.14:501][530]LogModuleManager: Shutting down and abandoning module WindowsMoviePlayer (226)
+[2021.07.12-18.01.14:501][530]LogModuleManager: Shutting down and abandoning module WmfMedia (224)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module PacketHandler (222)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module ClothingSystemEditor (220)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module ClothingSystemRuntime (218)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module Overlay (216)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module OverlayEditor (215)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module MediaAssets (212)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module VREditor (210)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module StringTableEditor (208)
+[2021.07.12-18.01.14:502][530]LogModuleManager: Shutting down and abandoning module GameplayTasksEditor (206)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module BehaviorTreeEditor (204)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module FunctionalTesting (202)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module CollisionAnalyzer (200)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module WorkspaceMenuStructure (199)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module UMG (196)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module UMGEditor (195)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module Sequencer (194)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module MessageLog (191)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module SlateReflector (186)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module Slate (184)
+[2021.07.12-18.01.14:503][530]LogModuleManager: Shutting down and abandoning module EditorStyle (182)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module MRMesh (180)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module SourceCodeAccess (178)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module HeadMountedDisplay (176)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module XAudio2 (174)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module Networking (172)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module Core (168)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module KismetCompiler (164)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module LevelSequence (162)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module MeshUtilities (160)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module MeshMergeUtilities (159)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module MeshReductionInterface (158)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module SimplygonSwarm (157)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module SimplygonMeshReduction (155)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module QuadricMeshReduction (153)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module MaterialBaking (149)
+[2021.07.12-18.01.14:506][530]LogModuleManager: Shutting down and abandoning module DirectoryWatcher (146)
+[2021.07.12-18.01.14:509][530]LogModuleManager: Shutting down and abandoning module DerivedDataCache (144)
+[2021.07.12-18.01.14:588][530]LogDerivedDataCache: Shutdown
+[2021.07.12-18.01.14:588][530]LogModuleManager: Shutting down and abandoning module TargetPlatform (142)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module VulkanShaderFormat (141)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module ShaderFormatVectorVM (139)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module ShaderFormatOpenGL (137)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module ShaderFormatD3D (135)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module MetalShaderFormat (133)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module TextureFormatUncompressed (131)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module TextureFormatPVR (129)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module TextureFormatDXT (127)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module TextureFormatIntelISPCTexComp (125)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module TextureFormatASTC (123)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module ImageWrapper (122)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module TextureFormatAndroid (119)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module AudioFormatOpus (117)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module AudioFormatOgg (115)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module AudioFormatADPCM (113)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module LinuxTargetPlatform (111)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module LinuxServerTargetPlatform (109)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module LinuxNoEditorTargetPlatform (107)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module LinuxClientTargetPlatform (105)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module TVOSTargetPlatform (103)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module Messaging (101)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module IOSTargetPlatform (99)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module HTML5TargetPlatform (97)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module Android_PVRTCTargetPlatform (95)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module Android_MultiTargetPlatform (93)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module Android_ETC2TargetPlatform (91)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module Android_ETC1TargetPlatform (89)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module Android_DXTTargetPlatform (87)
+[2021.07.12-18.01.14:589][530]LogModuleManager: Shutting down and abandoning module Android_ATCTargetPlatform (85)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module Android_ASTCTargetPlatform (83)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module AndroidTargetPlatform (81)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module WindowsTargetPlatform (79)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module WindowsServerTargetPlatform (77)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module WindowsNoEditorTargetPlatform (75)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module WindowsClientTargetPlatform (73)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module MacTargetPlatform (71)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module MacServerTargetPlatform (69)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module MacNoEditorTargetPlatform (67)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module MacClientTargetPlatform (65)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module AllDesktopTargetPlatform (63)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module InputCore (60)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module Settings (58)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module PhysXCooking (56)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module SteamVR (54)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module OculusHMD (52)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module ExampleDeviceProfileSelector (50)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module OnlineBlueprintSupport (48)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module OnlineSubsystem (44)
+[2021.07.12-18.01.14:590][530]LogOnline: Display: Unloading online subsystem: NULL
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module XMPP (43)
+[2021.07.12-18.01.14:590][530]LogModuleManager: Shutting down and abandoning module HTTP (41)
+[2021.07.12-18.01.14:590][530]LogHttp: Display: Http module shutting down, but needs to wait on 1 outstanding Http requests:
+[2021.07.12-18.01.14:590][530]LogHttp: Display: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BF9F93B84-4AE0-D8B8-5AFA-EBA1540CEAC1%7D&AppID=UEEditor.Rocket.Release&AppVersion=4.17.2-3658906%2B%2B%2BUE4%2BRelease-4.17&UserID=105e5889419d22d7972b74b1b9f23006%7Cb768b48376a54a88b3d75ccaa13b6283%7C84000443-1002-47c0-9c4a-aaa8e1a4657a&AppEnvironment=datacollector-binary&UploadType=eteventstream] status=Processing
+[2021.07.12-18.01.14:615][530]LogModuleManager: Shutting down and abandoning module SSL (40)
+[2021.07.12-18.01.14:617][530]LogModuleManager: Shutting down and abandoning module AnimationModifiers (36)
+[2021.07.12-18.01.14:617][530]LogModuleManager: Shutting down and abandoning module PropertyEditor (35)
+[2021.07.12-18.01.14:617][530]LogModuleManager: Shutting down and abandoning module AudioEditor (32)
+[2021.07.12-18.01.14:617][530]LogModuleManager: Shutting down and abandoning module TextureCompressor (30)
+[2021.07.12-18.01.14:617][530]LogModuleManager: Shutting down and abandoning module ShaderCore (28)
+[2021.07.12-18.01.14:617][530]LogModuleManager: Shutting down and abandoning module Landscape (26)
+[2021.07.12-18.01.14:617][530]LogModuleManager: Shutting down and abandoning module SlateRHIRenderer (24)
+[2021.07.12-18.01.14:628][530]LogModuleManager: Shutting down and abandoning module OpenGLDrv (22)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module D3D11RHI (20)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module AnimGraphRuntime (18)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module Renderer (16)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module Engine (14)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module CoreUObject (12)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module NetworkFile (10)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module CookedIterativeFile (8)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module StreamingFile (6)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module SandboxFile (4)
+[2021.07.12-18.01.14:629][530]LogModuleManager: Shutting down and abandoning module PakFile (2)
+[2021.07.12-18.01.14:633][530]LogExit: Exiting.
+[2021.07.12-18.01.14:642][530]Log file closed, 07/13/21 03:01:14
