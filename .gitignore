@@ -484,6 +484,12 @@ ASALocalRun/
 # Local History for Visual Studio
 .localhistory/
 .vs/
+AnimStarterPack/
+Binaries/
+Config/
+Saved/
+Intermediate/
+
 
 # BeatPulse healthcheck temp database
 healthchecksdb
