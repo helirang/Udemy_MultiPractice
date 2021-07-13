@@ -36,6 +36,10 @@
 ### UnrealEngine ###
 # Visual Studio 2015 user specific files
 .vs/
+Binaries/
+Config/
+Intermediate/
+Saved/
 
 # Compiled Object files
 
