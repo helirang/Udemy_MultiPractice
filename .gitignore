@@ -489,7 +489,7 @@ Binaries/
 Config/
 Saved/
 Intermediate/
-WeaponMeshes/
+Weapons/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
