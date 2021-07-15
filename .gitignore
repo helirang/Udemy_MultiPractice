@@ -490,6 +490,9 @@ Config/
 Saved/
 Intermediate/
 Weapons/
+Content/
+WeaponEffects/
+
 
 # BeatPulse healthcheck temp database
 healthchecksdb
