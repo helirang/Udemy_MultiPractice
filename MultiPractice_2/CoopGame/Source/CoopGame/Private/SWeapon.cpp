@@ -3,6 +3,10 @@
 #include "SWeapon.h"
 #include "DrawDebugHelpers.h"
 #include "Kismet/GameplayStatics.h"
+#include "Particles/ParticleSystem.h"
+#include "Components//SkeletalMeshComponent.h"
+#include "Particles/ParticleSystemComponent.h"
+
 
 // Sets default values
 ASWeapon::ASWeapon()
@@ -12,6 +16,9 @@ ASWeapon::ASWeapon()
 
 	MeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("MeshComp"));
 	RootComponent = MeshComp;
+
+	MuzzleSocketName = "MuzzleSocket";
+	TracerTargetName = "Target";
 }
 
 // Called when the game starts or when spawned
@@ -44,6 +51,10 @@ void ASWeapon::Fire()
 		//Trace가 false이면 경계 상자와 같이 단순 수집만 수행 합니다.
 		//If this is a false, it will only do a simple collection that it could be a simple like bounding box
 
+		//Particle "Target" parameter
+		FVector TracerEndPoint = TraceEnd;
+
+
 		FHitResult Hit; // 무엇을 쳤는지, 얼마나 멀리 떨어져 있는지 등의 여러 데이터가 담겨있는 구조체
 		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, ECC_Visibility, QueryParams))
 		{
@@ -55,9 +66,36 @@ void ASWeapon::Fire()
 			UGameplayStatics::ApplyPointDamage(HitActor, 20.0f, ShotDirection, Hit, MyOwner->GetInstigatorController(), this, DamageType);
 			//HitActor, 20데미지, 발사방향, Hit구조체, 발사자 정보, 무기정보(?),
 			//TSubclassOf<UDamageType>로 화염 데미지나 독 데미지 구현 가능
+
+			if (ImpactEffect)
+			{
+				UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ImpactEffect, Hit.ImpactPoint, Hit.ImpactNormal.Rotation());
+				//ImpactPoint 도착지, ImpactNormal( 방향을 알기 위해 사용 )
+			}
+
+			TracerEndPoint = Hit.ImpactPoint;
 		}
 
 		DrawDebugLine(GetWorld(), EyeLocation, TraceEnd, FColor::White, false, 1.0f, 0, 1.0f);
+
+		if (MuzzleEffect)
+		{
+			UGameplayStatics::SpawnEmitterAttached(MuzzleEffect, MeshComp, MuzzleSocketName);
+		}
+
+		
+
+		if (TracerEffect)
+		{
+			FVector MuzzleLocation = MeshComp->GetSocketLocation(MuzzleSocketName);
+
+			UParticleSystemComponent* TracerComp = UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), TracerEffect, MuzzleLocation);//파티클 생성, 생성위치 MuzzleLocation
+			if (TracerComp)
+			{
+				TracerComp->SetVectorParameter(TracerTargetName, TracerEndPoint);
+				//Target 파라미터에 TracerEndPoint( 파티클 시스템의 도착지 )를 넘겨준다.
+			}
+		}
 	}
 }
 
