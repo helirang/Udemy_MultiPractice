@@ -4,6 +4,7 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PawnMovementComponent.h"
+#include "SWeapon.h"
 
 
 // Sets default values
@@ -20,13 +21,31 @@ ASCharacter::ASCharacter()
 
 	CameraComp = CreateDefaultSubobject<UCameraComponent>(TEXT("CameraComp"));
 	CameraComp->SetupAttachment(SpringArmComp);
+
+	ZooomedFOV = 65.0f;
+	ZoomInterSpeed = 20.0f;
+	WeaponAttachSocketName = "WeaponSocket";
 }
 
 // Called when the game starts or when spawned
 void ASCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+
+	DefalutFOV = CameraComp->FieldOfView;
+	//the view in the camera component in Blueprint, we still have a valid value because we just caches here during the gameplay.
 	
+	//Spawn a default weapon
+	FActorSpawnParameters SpawnParams; //충돌이 발생해도 계속 스폰
+	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	
+	CurrentWeapon =  GetWorld()->SpawnActor<ASWeapon>(StarterWeaponClass,FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->SetOwner(this);
+		CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+	}
 }
 
 void ASCharacter::MoveForward(float Value)
@@ -49,11 +68,34 @@ void ASCharacter::EndCrouch()
 	UnCrouch();
 }
 
+void ASCharacter::BeginZoom()
+{
+	bWantsToZoom = true;
+}
+
+void ASCharacter::EndZoom()
+{
+	bWantsToZoom = false;
+}
+
+
+void ASCharacter::Fire()
+{
+	if (CurrentWeapon)
+	{
+		CurrentWeapon->Fire();
+	}
+}
+
 // Called every frame
 void ASCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	float TargetFOV = bWantsToZoom ? ZooomedFOV : DefalutFOV;
+	float NewFOV = FMath::FInterpTo(CameraComp->FieldOfView, TargetFOV, DeltaTime, ZoomInterSpeed);
+
+	CameraComp->SetFieldOfView(NewFOV);
 }
 
 // Called to bind functionality to input
@@ -71,6 +113,11 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction("Crouch", IE_Released, this, &ASCharacter::EndCrouch);
 
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ASCharacter::Jump);
+
+	PlayerInputComponent->BindAction("Zoom", IE_Pressed, this, &ASCharacter::BeginZoom);
+	PlayerInputComponent->BindAction("Zoom", IE_Released, this, &ASCharacter::EndZoom);
+
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ASCharacter::Fire);
 }
 
 FVector ASCharacter::GetPawnViewLocation() const
