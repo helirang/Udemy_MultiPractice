@@ -8,6 +8,7 @@
 #include "Particles/ParticleSystemComponent.h"
 #include "CoopGame.h"
 #include "PhysicalMaterials//PhysicalMaterial.h"
+#include "TimerManager.h"
 
 static int32 DebugWeaponDrawing = 0;
 FAutoConsoleVariableRef CVARDebugWeaponDrawing(
@@ -24,6 +25,29 @@ ASWeapon::ASWeapon()
 
 	MuzzleSocketName = "MuzzleSocket";
 	TracerTargetName = "Target";
+	BaseDamage = 20.0f;
+
+	RateOfFire = 600;
+}
+
+void ASWeapon::BeginPlay()
+{
+	Super::BeginPlay();
+
+	TimeBetweenShots = 60 / RateOfFire;
+}
+
+void ASWeapon::StartFire()
+{
+	float FirstDelay = FMath::Max(LastFireTime + TimeBetweenShots - GetWorld()->TimeSeconds, 0.0f);
+	//FMath::Max == (1,2) 1 또는 2중에서 큰 놈을 고른다. 즉 1이 음수이면 2인 0.0f가 반환된다.
+	GetWorldTimerManager().SetTimer(TimerHandle_TimeBetweenShots, this, &ASWeapon::Fire, TimeBetweenShots, true, FirstDelay);
+	//지연 1.0f, 발사할 시작하면 1초마다 호출
+}
+
+void ASWeapon::StopFire()
+{
+	GetWorldTimerManager().ClearTimer(TimerHandle_TimeBetweenShots);
 }
 
 void ASWeapon::Fire()
@@ -55,18 +79,25 @@ void ASWeapon::Fire()
 
 
 		FHitResult Hit; // 무엇을 쳤는지, 얼마나 멀리 떨어져 있는지 등의 여러 데이터가 담겨있는 구조체
-		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, ECC_Visibility, QueryParams))
+		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, ECC_GameTraceChannel1, QueryParams))
 		{
 			//Hit 구조체, EyeLocation(출발 위치), TraceEnd(도착 위치), 채널( 겹침, 차단 등등 체크하는 채널), 충돌쿼리
 			//Blocking hit! Process damage 
 
 			AActor* HitActor = Hit.GetActor();
 
-			UGameplayStatics::ApplyPointDamage(HitActor, 20.0f, ShotDirection, Hit, MyOwner->GetInstigatorController(), this, DamageType);
+			EPhysicalSurface SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
+
+			float ActualDamage = BaseDamage;
+			if (SurfaceType == SURFACE_FLESHVULNERABLE)
+			{
+				ActualDamage *= 4.0f;
+			}
+
+			UGameplayStatics::ApplyPointDamage(HitActor, ActualDamage, ShotDirection, Hit, MyOwner->GetInstigatorController(), this, DamageType);
 			//HitActor, 20데미지, 발사방향, Hit구조체, 발사자 정보, 무기정보(?),
 			//TSubclassOf<UDamageType>로 화염 데미지나 독 데미지 구현 가능
 
-			EPhysicalSurface SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
 			//Hit.PhysMaterial은 약한 객체 포인터로, 메모리에 보관되는것이 보장되지 않는다.
 			//예를 들어, 이 구조체가 이 물리적 재료 포인터를 사용하는 유일한 유일한 구조체이면 엔진은 메모리에서 이를 제거할 수 있다.
 			// 번역투라 어렵다. 약한 객체 포인터 TWeakObjectPointer( TWeakObjectPtr )
@@ -101,6 +132,7 @@ void ASWeapon::Fire()
 
 		PlayFireEffects(TracerEndPoint);
 
+		LastFireTime = GetWorld()->TimeSeconds;
 	}
 }
 

@@ -36,7 +36,8 @@ protected:
 	void EndCrouch();
 	void BeginZoom();
 	void EndZoom();
-	void Fire();
+	void StartFire();
+	void StopFire();
 
 public:
 
