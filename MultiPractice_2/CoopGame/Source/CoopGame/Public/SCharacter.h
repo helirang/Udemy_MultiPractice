@@ -65,6 +65,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Player", meta = (ClampMin = 0.1, ClampMax = 100))
 	float ZoomInterSpeed; //0.1 ~ 100사이의 값으로 제한?
 
+	UPROPERTY(Replicated)
 	ASWeapon* CurrentWeapon;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Player")

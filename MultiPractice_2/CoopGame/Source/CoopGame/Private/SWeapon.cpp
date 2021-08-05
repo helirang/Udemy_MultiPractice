@@ -9,6 +9,7 @@
 #include "CoopGame.h"
 #include "PhysicalMaterials//PhysicalMaterial.h"
 #include "TimerManager.h"
+#include "Net/UnrealNetwork.h"
 
 static int32 DebugWeaponDrawing = 0;
 FAutoConsoleVariableRef CVARDebugWeaponDrawing(
@@ -28,6 +29,8 @@ ASWeapon::ASWeapon()
 	BaseDamage = 20.0f;
 
 	RateOfFire = 600;
+
+	SetReplicates(true);
 }
 
 void ASWeapon::BeginPlay()
@@ -52,6 +55,13 @@ void ASWeapon::StopFire()
 
 void ASWeapon::Fire()
 {
+	/*We're going to check if the role is not role authorities, that it is basically something like a client.
+		And if that is the case, we just call server fire and then we return.*/
+	if (Role < ROLE_Authority) //서버가 아니고 클라이언트와 같은 것이면
+	{
+		ServerFire();
+	}
+
 	//누가 WEAPON의 소유주인지, 또한 들고 있는 사람이 누구인지 알아야된다
 	AActor* MyOwner = GetOwner();
 	if (MyOwner)
@@ -95,6 +105,8 @@ void ASWeapon::Fire()
 			}
 
 			UGameplayStatics::ApplyPointDamage(HitActor, ActualDamage, ShotDirection, Hit, MyOwner->GetInstigatorController(), this, DamageType);
+			//PointDamage를 내부적으로 작용하는 경우, 육체적 충돌(Impulse)도 지원한다. 예) 통조림 오브젝트를 쐇을때, 물리적 충돌이 적용된다.
+			//물리적으로 시뮬레이션 하거나 ragdoll
 			//HitActor, 20데미지, 발사방향, Hit구조체, 발사자 정보, 무기정보(?),
 			//TSubclassOf<UDamageType>로 화염 데미지나 독 데미지 구현 가능
 
@@ -132,8 +144,31 @@ void ASWeapon::Fire()
 
 		PlayFireEffects(TracerEndPoint);
 
+		if (Role == ROLE_Authority)
+		{
+			HitScanTrace.TraceTo = TracerEndPoint;
+			//HitScanTrace.TraceFrom == 근육 위치
+		}
+
 		LastFireTime = GetWorld()->TimeSeconds;
 	}
+}
+
+void ASWeapon::OnRep_HitScanTrace()
+{
+	// Play cosmetic FX
+	PlayFireEffects(HitScanTrace.TraceTo);
+}
+
+
+void ASWeapon::ServerFire_Implementation() //서버 기능을 사용할 때는, Server를 접두사로 사용하는것이 중요 규칙이다.
+{
+	Fire();
+}
+
+bool ASWeapon::ServerFire_Validate() //코드의 유효성을 검사하는 기능, 해당 검사에서 false가 반환되면 해당 클라이언트는 서버에서 연결이 끊어진다.
+{
+	return true;
 }
 
 void ASWeapon::PlayFireEffects(FVector TracerEnd)
@@ -164,4 +199,21 @@ void ASWeapon::PlayFireEffects(FVector TracerEnd)
 			PC->ClientPlayCameraShake(FireCamShake);
 		}
 	}
+}
+
+
+/*
+And the other file, it's already done for us by the annual header tool by by EPIK that takes care of
+this through the day care of certain certain functions for us, which includes this one.
+This just gets auto generated for us.
+헤더파일에 네트워크를 지정해주지 않아도 된다. 지정할 필요가 없는 특별한 경우 중 하나이다.
+*/
+void ASWeapon::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const //무엇을 복제하고 어떤 복제방법을 선택할지 정하는 함수?
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME_CONDITION(ASWeapon, HitScanTrace, COND_SkipOwner); //랩 수명에 대한 매크로 // 복제할 위치에 대한 가장 간단한 기본 사양]
+	// DOREPLIFETIME 매크로는 서버와 연결된 모든 관련 클라이언트에 대한 리플리케이터를한다.
+	// DOREPLIFETIME_CONDITION(,,COND_SkipOwner)은 소유한 클라이언트에 이것을 복제하고 싶지 않을 때 사용한다. 즉) 본인한테는 리플리케이트 안함
+	// 즉) 무기를 발사한 사람을 제외한 모든 사람에게 잔파된다.
 }

@@ -8,6 +8,7 @@
 #include "SWeapon.h"
 #include "CoopGame.h"
 #include "SHealthComponent.h"
+#include "Net/UnrealNetwork.h"
 
 
 // Sets default values
@@ -41,20 +42,23 @@ void ASCharacter::BeginPlay()
 
 	DefalutFOV = CameraComp->FieldOfView;
 	//the view in the camera component in Blueprint, we still have a valid value because we just caches here during the gameplay.
-	
-	//Spawn a default weapon
-	FActorSpawnParameters SpawnParams; //충돌이 발생해도 계속 스폰
-	SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	
-	CurrentWeapon =  GetWorld()->SpawnActor<ASWeapon>(StarterWeaponClass,FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
-
-	if (CurrentWeapon)
-	{
-		CurrentWeapon->SetOwner(this);
-		CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
-	}
-
 	HealthComp->OnHealthChanged.AddDynamic(this, &ASCharacter::OnHealthChanged);
+
+
+	if (Role == ROLE_Authority) //서버에서 이 코드를 실행하는 경우에만 이 코드가 실행됨. 데디케이트 서버 // 코드가 실제로 실행되는 위치를 시각화하는 것
+	{
+		//Spawn a default weapon
+		FActorSpawnParameters SpawnParams; //충돌이 발생해도 계속 스폰
+		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		CurrentWeapon = GetWorld()->SpawnActor<ASWeapon>(StarterWeaponClass, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
+
+		if (CurrentWeapon)
+		{
+			CurrentWeapon->SetOwner(this);
+			CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponAttachSocketName);
+		}
+	}
 }
 
 void ASCharacter::MoveForward(float Value)
@@ -165,3 +169,10 @@ FVector ASCharacter::GetPawnViewLocation() const
 	return Super::GetPawnViewLocation();
 }
 
+void ASCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const //무엇을 복제하고 어떤 복제방법을 선택할지 정하는 함수?
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(ASCharacter, CurrentWeapon); //랩 수명에 대한 매크로 // 복제할 위치에 대한 가장 간단한 기본 사양]
+	// 해당 매크로는 서버와 연결된 모든 관련 클라이언트에 대한 리플리케이터를 만한다.
+}
