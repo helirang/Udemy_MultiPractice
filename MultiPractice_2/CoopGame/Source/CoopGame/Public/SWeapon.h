@@ -18,9 +18,9 @@ struct FHitScanTrace
 
 public:
 	UPROPERTY()
-	FVector_NetQuantize TraceFrom;
-	//벡터 패킹, 덜 정확하지만 네트워크를 통해 훨씬 적은 양의 데이터를 전송, 현재 벡터는 소수점 정밀도 0
-	// 샷방향으로 보내려면, Normal을 사용
+	TEnumAsByte<EPhysicalSurface> Surfacetype;
+	//구조체에 있고, 해당 구조체들이 가질 수 있도록 바이트로 변환? 뭔 말이지
+	// 대충 Enum은 복제 및 전달 할 수 없다. 따라서 바이트(TEnumAsByte)로 변환해서 복제 및 전달해야된다.
 
 	UPROPERTY()
 	FVector_NetQuantize TraceTo;
@@ -50,6 +50,8 @@ protected:
 
 	UFUNCTION()
 	void OnRep_HitScanTrace();
+
+	void PlayImpactEffect(EPhysicalSurface SurfaceType, FVector ImpactPoint);
 
 public:
 

@@ -31,6 +31,12 @@ ASWeapon::ASWeapon()
 	RateOfFire = 600;
 
 	SetReplicates(true);
+
+	NetUpdateFrequency = 66.0f;
+	MinNetUpdateFrequency = 33.0f;
+	// MinNetUpdateFrequency 기본값은 2.0f다. 
+	// 이제 게임이 초당 60프레임으로 실행될 것으로 예상. 
+	// NetUpdateFrequency의 기본값 100.0f는 과도해서 66.0f로 낮춘다.
 }
 
 void ASWeapon::BeginPlay()
@@ -87,6 +93,7 @@ void ASWeapon::Fire()
 		//Particle "Target" parameter
 		FVector TracerEndPoint = TraceEnd;
 
+		EPhysicalSurface SurfaceType = SurfaceType_Default;
 
 		FHitResult Hit; // 무엇을 쳤는지, 얼마나 멀리 떨어져 있는지 등의 여러 데이터가 담겨있는 구조체
 		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, ECC_GameTraceChannel1, QueryParams))
@@ -96,7 +103,7 @@ void ASWeapon::Fire()
 
 			AActor* HitActor = Hit.GetActor();
 
-			EPhysicalSurface SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
+			SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
 
 			float ActualDamage = BaseDamage;
 			if (SurfaceType == SURFACE_FLESHVULNERABLE)
@@ -115,25 +122,7 @@ void ASWeapon::Fire()
 			// 번역투라 어렵다. 약한 객체 포인터 TWeakObjectPointer( TWeakObjectPtr )
 			// 예) 내가 마지막으로 사용하는 경우 배우가 삭제될 수 있으며, 강제로 삭제하고 싶지 않습니다.
 
-			UParticleSystem* SelectedEffect = nullptr;
-
-			switch (SurfaceType)
-			{
-			case SURFACE_FLESHDEFAULT:
-			case SURFACE_FLESHVULNERABLE:
-				SelectedEffect = FleshImpactEffect;
-				break;
-			default:
-				SelectedEffect = DefaultImpactEffect;
-				break;
-			}
-
-			if (SelectedEffect)
-			{
-				UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), SelectedEffect, Hit.ImpactPoint, Hit.ImpactNormal.Rotation());
-				//ImpactPoint 도착지, ImpactNormal( 방향을 알기 위해 사용 )
-			}
-
+			PlayImpactEffect(SurfaceType, Hit.ImpactPoint);
 			TracerEndPoint = Hit.ImpactPoint;
 		}
 
@@ -147,7 +136,8 @@ void ASWeapon::Fire()
 		if (Role == ROLE_Authority)
 		{
 			HitScanTrace.TraceTo = TracerEndPoint;
-			//HitScanTrace.TraceFrom == 근육 위치
+			//HitScanTrace.TraceFrom == Muzzle 위치? 근육위치?
+			HitScanTrace.Surfacetype = SurfaceType;
 		}
 
 		LastFireTime = GetWorld()->TimeSeconds;
@@ -158,8 +148,38 @@ void ASWeapon::OnRep_HitScanTrace()
 {
 	// Play cosmetic FX
 	PlayFireEffects(HitScanTrace.TraceTo);
+
+	PlayImpactEffect(HitScanTrace.Surfacetype, HitScanTrace.TraceTo);
 }
 
+
+void ASWeapon::PlayImpactEffect(EPhysicalSurface SurfaceType, FVector ImpactPoint)
+{
+
+	UParticleSystem* SelectedEffect = nullptr;
+
+	switch (SurfaceType)
+	{
+	case SURFACE_FLESHDEFAULT:
+	case SURFACE_FLESHVULNERABLE:
+		SelectedEffect = FleshImpactEffect;
+		break;
+	default:
+		SelectedEffect = DefaultImpactEffect;
+		break;
+	}
+
+	if (SelectedEffect)
+	{
+		FVector MuzzleLocation = MeshComp->GetSocketLocation(MuzzleSocketName);
+
+		FVector ShotDirection = ImpactPoint - MuzzleLocation;
+		ShotDirection.Normalize();
+
+		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), SelectedEffect, ImpactPoint,ShotDirection.Rotation());
+		//ImpactPoint 도착지, ImpactNormal( 방향을 알기 위해 사용 )
+	}
+}
 
 void ASWeapon::ServerFire_Implementation() //서버 기능을 사용할 때는, Server를 접두사로 사용하는것이 중요 규칙이다.
 {

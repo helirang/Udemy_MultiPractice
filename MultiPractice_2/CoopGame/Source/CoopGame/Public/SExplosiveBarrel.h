@@ -20,6 +20,14 @@ public:
 	// Sets default values for this actor's properties
 	ASExplosiveBarrel();
 
+protected:
+	UFUNCTION()
+	void OnRep_Exploded();
+
+	UFUNCTION()
+	void OnHealthChanged(USHealthComponent* OwningHealthComp, float Health, float HealthDelta, const class UDamageType* DamageType,
+			class AController* InstigatedBy, AActor* DamageCauser);
+
 
 protected:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
@@ -31,10 +39,7 @@ protected:
 	UPROPERTY(VisibleAnywhere, Category = "Components")
 	URadialForceComponent* RadialForceComp;
 
-	UFUNCTION()
-	void OnHealthChanged(USHealthComponent* OwningHealthComp, float Health, float HealthDelta, const class UDamageType* DamageType, 
-		class AController* InstigatedBy, AActor* DamageCauser);
-
+	UPROPERTY(ReplicatedUsing=OnRep_Exploded)
 	bool bExploded;
 
 	UPROPERTY(EditDefaultsOnly, Category = "FX")
