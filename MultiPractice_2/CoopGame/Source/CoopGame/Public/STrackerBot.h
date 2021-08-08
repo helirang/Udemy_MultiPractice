@@ -6,6 +6,8 @@
 #include "GameFramework/Pawn.h"
 #include "STrackerBot.generated.h"
 
+class USHealthComponent;
+
 UCLASS()
 class COOPGAME_API ASTrackerBot : public APawn
 {
@@ -16,8 +18,14 @@ public:
 	ASTrackerBot();
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	FVector GetNextPathPoint();
+
+	UFUNCTION()
+	void HandleTakeDamage(USHealthComponent* OwningHealthComp, float Health, float HealthDelta, const class UDamageType* DamageType, 
+		class AController* InstigatedBy, AActor* DamageCauser);
+
+	void SelfDistruct();
 
 public:	
 	// Called every frame
@@ -27,6 +35,33 @@ public:
 protected:
 	UPROPERTY(VisibleDefaultsOnly, Category = "Components")
 	UStaticMeshComponent* MeshComp;
-	
-	
+
+	UPROPERTY(VisibleDefaultsOnly, Category = "Components")
+	USHealthComponent* HealthComp;
+
+	// Next point in navigation path
+	FVector NextPathPoint;
+
+	// Dynamic material to pulse on damage
+	UMaterialInstanceDynamic* MatInst;
+
+	UPROPERTY(EditDefaultsOnly, Category = "TrackerBot")
+	UParticleSystem* ExplosionEffect;
+
+	UPROPERTY(EditDefaultsOnly, Category = "TrackerBot")
+	float MovementForce;
+
+	UPROPERTY(EditDefaultsOnly, Category = "TrackerBot")
+	float RequiredDistanceToTarget;
+
+	UPROPERTY(EditDefaultsOnly, Category = "TrackerBot")
+	bool bUseVelocityChange;
+
+	bool bExploded;
+
+	UPROPERTY(EditDefaultsOnly, Category = "TrackerBot")
+	float ExplosionRadius;
+
+	UPROPERTY(EditDefaultsOnly, Category = "TrackerBot")
+	float ExplosionDamage;
 };
