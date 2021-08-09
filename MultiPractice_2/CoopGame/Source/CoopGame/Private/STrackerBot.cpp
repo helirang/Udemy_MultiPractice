@@ -52,40 +52,45 @@ void ASTrackerBot::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	// Find initial move-to
-	// 초기 이동 찾기
-	NextPathPoint = GetNextPathPoint();
-
+	if (Role == ROLE_Authority)
+	{
+		// Find initial move-to
+		// 초기 이동 찾기
+		NextPathPoint = GetNextPathPoint();
+	}
 }
 
 // Called every frame
 void ASTrackerBot::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	float DistanceToTarget = (GetActorLocation() - NextPathPoint).Size();
-
-	//if(!GetActorLocation().Equals(NextPathPoint))는 움직이는 물체가 정확한 벡터 값이 일치하기 힘드므로 아래와 같이 변경한다.
-	if (DistanceToTarget <= RequiredDistanceToTarget)
+	 
+	if (Role == ROLE_Authority && !bExploded)
 	{
-		NextPathPoint = GetNextPathPoint();
+		float DistanceToTarget = (GetActorLocation() - NextPathPoint).Size();
 
-		DrawDebugString(GetWorld(), GetActorLocation(), "Target Reached!");
+		//if(!GetActorLocation().Equals(NextPathPoint))는 움직이는 물체가 정확한 벡터 값이 일치하기 힘드므로 아래와 같이 변경한다.
+		if (DistanceToTarget <= RequiredDistanceToTarget)
+		{
+			NextPathPoint = GetNextPathPoint();
+
+			DrawDebugString(GetWorld(), GetActorLocation(), "Target Reached!");
+		}
+		else
+		{
+			// Keep moving towards next target
+			FVector ForceDirection = NextPathPoint - GetActorLocation();
+			ForceDirection.Normalize();
+
+			ForceDirection *= MovementForce;
+
+			MeshComp->AddForce(ForceDirection, NAME_None, bUseVelocityChange);
+
+			DrawDebugDirectionalArrow(GetWorld(), GetActorLocation(), GetActorLocation() + ForceDirection, 32, FColor::Yellow, false, 0.0f, 0, 1.0f);
+		}
+
+		DrawDebugSphere(GetWorld(), NextPathPoint, 20, 12, FColor::Yellow, false, 0.0f, 1.0f);
 	}
-	else
-	{
-		// Keep moving towards next target
-		FVector ForceDirection = NextPathPoint - GetActorLocation();
-		ForceDirection.Normalize();
-
-		ForceDirection *= MovementForce;
-
-		MeshComp->AddForce(ForceDirection, NAME_None, bUseVelocityChange);
-
-		DrawDebugDirectionalArrow(GetWorld(), GetActorLocation(), GetActorLocation() + ForceDirection, 32, FColor::Yellow, false, 0.0f,0,1.0f);
-	}
-
-	DrawDebugSphere(GetWorld(), NextPathPoint, 20, 12, FColor::Yellow, false, 0.0f, 1.0f);
 }
 
 FVector ASTrackerBot::GetNextPathPoint()
@@ -143,32 +148,43 @@ void ASTrackerBot::SelfDistruct()
 
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionEffect, GetActorLocation());
 
-	TArray<AActor*> IgnoredActors;
-	IgnoredActors.Add(this);
-
-	//Apply Damage
-	UGameplayStatics::ApplyRadialDamage(this, ExplosionDamage, GetActorLocation(), ExplosionRadius, nullptr, IgnoredActors, this, GetInstigatorController(), true);
-	// 데미지 100, 원점 GetActorLocation, 피해반경 200, nullpts, 무시할 액터 배열 목록, 피해 원인 this, Get, 기본값으로 두고 데미지를 적용할지 여부 bool
-
-	DrawDebugSphere(GetWorld(), GetActorLocation(), ExplosionRadius, 12, FColor::Red, false, 2.0f, 0, 1.0f);
-
 	UGameplayStatics::PlaySoundAtLocation(this, ExplodeSound, GetActorLocation());
 
-	// Delete Actor immediately
-	Destroy();
+	MeshComp->SetVisibility(false, true);
+	MeshComp->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	//TrackerBot Actor가 이미 복제되기 때문에, 파괴는 따로 네트워크 처리를하지 않아도. 모든 클라이언트에서 파괴된다.
+	if (Role == ROLE_Authority)
+	{
+		TArray<AActor*> IgnoredActors;
+		IgnoredActors.Add(this);
+
+		//Apply Damage
+		UGameplayStatics::ApplyRadialDamage(this, ExplosionDamage, GetActorLocation(), ExplosionRadius, nullptr, IgnoredActors, this, GetInstigatorController(), true);
+		// 데미지 100, 원점 GetActorLocation, 피해반경 200, nullpts, 무시할 액터 배열 목록, 피해 원인 this, Get, 기본값으로 두고 데미지를 적용할지 여부 bool
+
+
+		DrawDebugSphere(GetWorld(), GetActorLocation(), ExplosionRadius, 12, FColor::Red, false, 2.0f, 0, 1.0f);
+
+		SetLifeSpan(2.0f);
+	}
 }
 
 void ASTrackerBot::NotifyActorBeginOverlap(AActor* OtherActor)
 {
-	if (!bStartedSelfDestruction)
+	if (!bStartedSelfDestruction && !bExploded)
 	{
 		ASCharacter* PlayerPawn = Cast<ASCharacter>(OtherActor);
 		if (PlayerPawn)
 		{
 			// We overlapped with a player
-			// Start self destruction sequence
-			// GetWorldTimerManager는 include 없이 동작한다.
-			GetWorldTimerManager().SetTimer(TimerHandle_SelfDamage, this, &ASTrackerBot::DamageSelf, SelfDamageInterval, true, 0.0f);
+
+			if (Role == ROLE_Authority)
+			{
+				// Start self destruction sequence
+				// GetWorldTimerManager는 include 없이 동작한다.
+				GetWorldTimerManager().SetTimer(TimerHandle_SelfDamage, this, &ASTrackerBot::DamageSelf, SelfDamageInterval, true, 0.0f);
+			}
 
 			bool bStartedSelfDestruction = true;
 
