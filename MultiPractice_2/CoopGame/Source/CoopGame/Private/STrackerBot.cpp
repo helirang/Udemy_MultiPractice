@@ -8,6 +8,8 @@
 #include "GameFramework/Character.h"
 #include "DrawDebugHelpers.h"
 #include "SHealthComponent.h"
+#include "SCharacter.h"
+#include "Components/SphereComponent.h"  
 
 // Sets default values
 ASTrackerBot::ASTrackerBot()
@@ -27,6 +29,13 @@ ASTrackerBot::ASTrackerBot()
 	// OnHealthChanged이벤트에 추가. 영어로는 구독(서브스크라이퍼)라고 한다.
 	//HandleTakeDamage 함수는 OnHealthChanged와 인수가 같아야 한다(?)
 
+	SphereCom = CreateDefaultSubobject<USphereComponent>(TEXT("SphereCom"));
+	SphereCom->SetSphereRadius(200);
+	SphereCom->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	SphereCom->SetCollisionResponseToAllChannels(ECR_Ignore);
+	SphereCom->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap); // ECR_Overlap 물리엔진이 처리하는 비용을 줄여준다. 알아보기
+	SphereCom->SetupAttachment(RootComponent);
+
 	bUseVelocityChange = false;
 	MovementForce = 1000;
 	RequiredDistanceToTarget = 100;
@@ -43,6 +52,7 @@ void ASTrackerBot::BeginPlay()
 	// Find initial move-to
 	// 초기 이동 찾기
 	NextPathPoint = GetNextPathPoint();
+
 }
 
 // Called every frame
@@ -141,5 +151,29 @@ void ASTrackerBot::SelfDistruct()
 
 	// Delete Actor immediately
 	Destroy();
+}
+
+void ASTrackerBot::NotifyActorBeginOverlap(AActor* OtherActor)
+{
+	if (!bStartedSelfDestruction)
+	{
+		ASCharacter* PlayerPawn = Cast<ASCharacter>(OtherActor);
+		if (PlayerPawn)
+		{
+			// We overlapped with a player
+			// Start self destruction sequence
+			// GetWorldTimerManager는 include 없이 동작한다.
+			GetWorldTimerManager().SetTimer(TimerHandle_SelfDamage, this, &ASTrackerBot::DamageSelf, 0.5f, true, 0.0f);
+
+			bool bStartedSelfDestruction = true;
+		}
+
+	}
+}
+
+void ASTrackerBot::DamageSelf()
+{
+	UGameplayStatics::ApplyDamage(this, 20, GetInstigatorController(), this, nullptr);
+	// 이 타이머 이벤트 인스티게이터의 모든 틱은 인스티게이터 컨트롤러를 스스로 끄도록 한다. == 3번째 매개변수 = GetInstigatorController
 }
 
