@@ -10,6 +10,8 @@ ASPowerupActor::ASPowerupActor()
 	PowerupInterval = 0.0f;
 	TotalNrOfTicks = 0;
 
+	bIsPowerupActive = false;
+
 	SetReplicates(true);
 }
 
@@ -38,6 +40,9 @@ void ASPowerupActor::ActivatePowerup()
 {
 	OnActivated();
 	//활성화 호출
+
+	bIsPowerupActive = true;
+	OnRep_PowerupActive();
 
 	if (PowerupInterval > 0.0f)
 	{
