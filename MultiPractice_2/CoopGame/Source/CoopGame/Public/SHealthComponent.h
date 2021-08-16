@@ -11,7 +11,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_SixParams(FOnHealthChangedSignature,USHealthC
 // (1.이벤트 유형의 이름 / 2부터 매개변수 / 현재 프로젝트에서 사용한 매개 변수 2.트리거한 상태 구성 요소, 3. 체력 변수, 4.체력 변경용 변수, 
 // 5부터는 HandleTakeAnyDamage과 연관되기 때문에 해당 함수 관련 매개변수를 가져옴)
 
-UCLASS( ClassGroup=(COOP), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup=(COOP), meta=(BlueprintSpawnableComponent) )
 class COOPGAME_API USHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -19,6 +19,10 @@ class COOPGAME_API USHealthComponent : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	USHealthComponent();
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "HealthComponent")
+	void Heal(float HealAmount);
 
 protected:
 	UFUNCTION() 
