@@ -45,10 +45,10 @@ protected:
 
 public:	
 
-	void ActivatePowerup();
+	void ActivatePowerup(AActor* ActiveFor);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "Powerups")
-	void OnActivated();
+	void OnActivated(AActor* ActiveFor);
 	/*BlueprintImplementableEvent은 블루프린트에서 전체를 구현하겠다는 선언
 	따라서 c++에는 기본 구현이 없다.*/
 
