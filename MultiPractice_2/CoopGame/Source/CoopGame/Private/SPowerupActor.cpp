@@ -49,6 +49,7 @@ void ASPowerupActor::ActivatePowerup(AActor* ActiveFor)
 		GetWorldTimerManager().SetTimer(TimerHandle_PowerupTick, this, &ASPowerupActor::OnTickPowerup, PowerupInterval, true /*,0.0f*/);
 		// 0.0f 제거, 하나의 full 틱만 있으면 됨,즉시 발생 but 첫번째 인터페이스가 통과되야 발생 시작
 	}
+	else
 	{
 		OnTickPowerup();
 	}
