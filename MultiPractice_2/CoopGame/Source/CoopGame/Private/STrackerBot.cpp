@@ -101,7 +101,7 @@ FVector ASTrackerBot::GetNextPathPoint()
 	UNavigationPath* NavPath = UNavigationSystem::FindPathToActorSynchronously(this, GetActorLocation(), PlayerPawn);
 	//AI가 위치한 세상[레벨]이 어디인지 알려줘야한다.
 
-	if( NavPath->PathPoints.Num() > 1) // 배열의 크기가 1보다 작다면 현재의 위치만을 가진 것이다.
+	if(  NavPath && NavPath->PathPoints.Num() > 1) // 배열의 크기가 1보다 작다면 현재의 위치만을 가진 것이다.
 	{
 		//Return next point in the path
 		return NavPath->PathPoints[1];
