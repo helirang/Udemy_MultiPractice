@@ -21,11 +21,15 @@ protected:
 	int32 NrOfBotsToSpawn;
 
 	int32 WaveCount;
+
+	UPROPERTY(EditDefaultsOnly, Category = "GameMode")
+	float TimeBetweenWaves;
 	
 protected:
 
 	// Hook for BP to Spwan a single bot
 	// BlueprintImplementableEvent c++에 구현이 없는 청사진
+
 	UFUNCTION(BlueprintImplementableEvent, Category = "GameMode")
 	void SpawnNewBot();
 
@@ -37,11 +41,11 @@ protected:
 	// Stop Spawning Bots
 	void EndWave();
 
-	// Set timer for next startwave
+	// Set timer for next start wave
 	void PrepareForNextWave();
 	
 public:
-	 
+	ASGameMode();
+
 	virtual void StartPlay() override;
-	
 };

@@ -95,14 +95,16 @@ void ASTrackerBot::Tick(float DeltaTime)
 
 FVector ASTrackerBot::GetNextPathPoint()
 {
-	// Hack, to get player location // Hack으로 레이블을 지정하여 플레이어를 얻을 것이다. (나중에)
+	// Hack, to get player location 
+	// Hack으로 레이블을 지정하여 플레이어를 얻을 것이다. (나중에)
 	ACharacter* PlayerPawn = UGameplayStatics::GetPlayerCharacter(this, 0); //멀티플레이어에서 유지되지 않음.
 
 	UNavigationPath* NavPath = UNavigationSystem::FindPathToActorSynchronously(this, GetActorLocation(), PlayerPawn);
 	//AI가 위치한 세상[레벨]이 어디인지 알려줘야한다.
 
-	if(  NavPath && NavPath->PathPoints.Num() > 1) // 배열의 크기가 1보다 작다면 현재의 위치만을 가진 것이다.
+	if(  NavPath && NavPath->PathPoints.Num() > 1) 
 	{
+		// 배열의 크기가 1보다 작다면 현재의 위치만을 가진 것이다.
 		//Return next point in the path
 		return NavPath->PathPoints[1];
 	}
