@@ -48,6 +48,7 @@ void ASGameMode::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 
 	CheckWaveState();
+	CheckAnyPlayerAlive();
 }
 
 void ASGameMode::EndWave()
@@ -74,7 +75,7 @@ void ASGameMode::CheckWaveState()
 	bool bIsAnyBotAlive = false;
 
 	// 사용 가능한 폰 또는 레벨에 있는 유사 폰 목록이 유지
-	for(FConstPawnIterator It = GetWorld()->GetPawnIterator(); It; It++)
+	for(FConstPawnIterator It = GetWorld()->GetPawnIterator(); It; ++It)
 	{
 		APawn* TestPawn = It->Get();
 		if (TestPawn == nullptr || TestPawn->IsPlayerControlled())
@@ -94,4 +95,34 @@ void ASGameMode::CheckWaveState()
 	{
 		PrepareForNextWave();
 	}
+}
+
+void ASGameMode::CheckAnyPlayerAlive()
+{
+	for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
+	{
+		APlayerController* PC = It->Get();
+		if (PC && PC->GetPawn())
+		{
+			APawn* MyPanw = PC->GetPawn();
+			 USHealthComponent* HealthComp = Cast<USHealthComponent>(MyPanw->GetComponentByClass(USHealthComponent::StaticClass()));
+			 if (ensure(HealthComp) && HealthComp->GetHealth() > 0.0f)
+			 {
+				// A player is still alive.
+				 return;
+			 }
+		}
+	}
+	
+	// No player alive
+	GameOver();
+}
+
+void ASGameMode::GameOver()
+{
+	EndWave();
+
+	// @TODO: Finish up the match, present 'game over' to players.
+
+	UE_LOG(LogTemp, Log, TEXT("GAME OVER! Players Died"));
 }
