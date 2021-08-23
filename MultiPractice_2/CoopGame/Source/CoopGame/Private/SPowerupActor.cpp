@@ -2,6 +2,7 @@
 
 #include "SPowerupActor.h"
 #include "Net/UnrealNetwork.h"
+#include "SCharacter.h"
 
 
 // Sets default values
@@ -38,21 +39,27 @@ void ASPowerupActor::OnRep_PowerupActive()
 
 void ASPowerupActor::ActivatePowerup(AActor* ActiveFor)
 {
-	OnActivated(ActiveFor);
-	//활성화 호출
+	ASCharacter* PlayerPawn = Cast<ASCharacter>(ActiveFor);
 
-	bIsPowerupActive = true;
-	OnRep_PowerupActive();
+	if(PlayerPawn)
+	{
+		OnActivated(ActiveFor);
+		//활성화 호출
 
-	if (PowerupInterval > 0.0f)
-	{
-		GetWorldTimerManager().SetTimer(TimerHandle_PowerupTick, this, &ASPowerupActor::OnTickPowerup, PowerupInterval, true /*,0.0f*/);
-		// 0.0f 제거, 하나의 full 틱만 있으면 됨,즉시 발생 but 첫번째 인터페이스가 통과되야 발생 시작
+		bIsPowerupActive = true;
+		OnRep_PowerupActive();
+
+		if (PowerupInterval > 0.0f)
+		{
+			GetWorldTimerManager().SetTimer(TimerHandle_PowerupTick, this, &ASPowerupActor::OnTickPowerup, PowerupInterval, true /*,0.0f*/);
+			// 0.0f 제거, 하나의 full 틱만 있으면 됨,즉시 발생 but 첫번째 인터페이스가 통과되야 발생 시작
+		}
+		else
+		{
+			OnTickPowerup();
+		}
 	}
-	else
-	{
-		OnTickPowerup();
-	}
+	
 }
 
 void ASPowerupActor::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const //무엇을 복제하고 어떤 복제방법을 선택할지 정하는 함수?

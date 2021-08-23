@@ -75,3 +75,8 @@ void USHealthComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Ou
 	DOREPLIFETIME(USHealthComponent, Health); //랩 수명에 대한 매크로 // 복제할 위치에 대한 가장 간단한 기본 사양]
 	// 해당 매크로는 서버와 연결된 모든 관련 클라이언트에 대한 리플리케이터를 만한다.
 }
+
+float USHealthComponent::GetHealth() const
+{
+	return Health;
+}

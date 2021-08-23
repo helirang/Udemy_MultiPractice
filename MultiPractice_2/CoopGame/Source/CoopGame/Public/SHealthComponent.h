@@ -41,6 +41,8 @@ public:
 	FOnHealthChangedSignature OnHealthChanged;
 	//BlueprintAssignable == 대리자를 청사진에 사용 할 수 있다.
 
+	float GetHealth() const;
+
 protected:
 	UPROPERTY(ReplicatedUsing=OnRep_Health,BlueprintReadOnly, Category = "HealthComponent")
 	float Health;

@@ -5,6 +5,7 @@
 #include "Components/DecalComponent.h"
 #include "TimerManager.h"
 #include "SPowerupActor.h"
+#include "SCharacter.h"
 
 
 // Sets default values
@@ -50,15 +51,25 @@ void ASPickupActor::Respawn()
 
 void ASPickupActor::NotifyActorBeginOverlap(AActor* OtherActor)
 {
-	Super::NotifyActorBeginOverlap(OtherActor);
+	/*
+	ASCharacter* PlayerPawn = Cast<ASCharacter>(OtherActor);
+	if (PlayerPawn) 
+	위 두줄은 부딪힌 액터가  Cast<ASCharacter>일 때만 실행하게 하는 조건문이다.
+	*/
+	ASCharacter* PlayerPawn = Cast<ASCharacter>(OtherActor);
 
-	// @TODO: Grant a powerup to player if available
-	if (Role == ROLE_Authority && PowerUpInstance)
+	if (PlayerPawn)
 	{
-		PowerUpInstance->ActivatePowerup(OtherActor);
-		PowerUpInstance = nullptr;
+		Super::NotifyActorBeginOverlap(OtherActor);
 
-		//Set Timer to respawn
-		GetWorldTimerManager().SetTimer(TimerHandle_RespawnTimer,this, &ASPickupActor::Respawn,CooldownDuration);
+		// @TODO: Grant a powerup to player if available
+		if (Role == ROLE_Authority && PowerUpInstance)
+		{
+			PowerUpInstance->ActivatePowerup(OtherActor);
+			PowerUpInstance = nullptr;
+
+			//Set Timer to respawn
+			GetWorldTimerManager().SetTimer(TimerHandle_RespawnTimer, this, &ASPickupActor::Respawn, CooldownDuration);
+		}
 	}
 }

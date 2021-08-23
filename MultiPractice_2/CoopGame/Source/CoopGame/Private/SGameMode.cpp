@@ -1,11 +1,16 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "SGameMode.h"
+#include "SHealthComponent.h"
 #include "TimerManager.h"	
 
 ASGameMode::ASGameMode()
 {
 	TimeBetweenWaves = 2.0f;
+
+	//틱 활성화 및 간격 설정
+	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.TickInterval = 1.0f;
 }
 
 void ASGameMode::SpawnBotTimerElapsed()
@@ -38,15 +43,55 @@ void ASGameMode::StartPlay()
 	PrepareForNextWave();
 }
 
+void ASGameMode::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	CheckWaveState();
+}
+
 void ASGameMode::EndWave()
 {
 	GetWorldTimerManager().ClearTimer(TimerHandle_BotSpawner);
-
-	PrepareForNextWave();
 }
 
 void ASGameMode::PrepareForNextWave()
 {
-	FTimerHandle TimerHandle_NextWaveStart;
+	
 	GetWorldTimerManager().SetTimer(TimerHandle_NextWaveStart, this, &ASGameMode::StartWave, TimeBetweenWaves, false);
+}
+
+void ASGameMode::CheckWaveState()
+{
+	//TimerHandle_NextWaveStart이 활성화 되어 있는지 파악
+	bool bIsPrepareingForWave = GetWorldTimerManager().IsTimerActive(TimerHandle_NextWaveStart);
+
+	if (NrOfBotsToSpawn > 0 || bIsPrepareingForWave)
+	{
+		return;
+	}
+
+	bool bIsAnyBotAlive = false;
+
+	// 사용 가능한 폰 또는 레벨에 있는 유사 폰 목록이 유지
+	for(FConstPawnIterator It = GetWorld()->GetPawnIterator(); It; It++)
+	{
+		APawn* TestPawn = It->Get();
+		if (TestPawn == nullptr || TestPawn->IsPlayerControlled())
+		{
+			continue;
+		}
+
+		USHealthComponent* HealthComp = Cast<USHealthComponent>(TestPawn->GetComponentByClass(USHealthComponent::StaticClass()));
+		if (HealthComp && HealthComp->GetHealth() > 0.0f)
+		{
+			bIsAnyBotAlive = true;
+			break;
+		}
+	}
+
+	if (bIsAnyBotAlive)
+	{
+		PrepareForNextWave();
+	}
 }
