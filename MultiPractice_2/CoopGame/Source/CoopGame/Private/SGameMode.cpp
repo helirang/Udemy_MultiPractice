@@ -2,11 +2,14 @@
 
 #include "SGameMode.h"
 #include "SHealthComponent.h"
+#include "SGameState.h"
 #include "TimerManager.h"	
 
 ASGameMode::ASGameMode()
 {
 	TimeBetweenWaves = 2.0f;
+
+	GameStateClass = ASGameMode::StaticClass();
 
 	//틱 활성화 및 간격 설정
 	PrimaryActorTick.bCanEverTick = true;
@@ -104,7 +107,7 @@ void ASGameMode::CheckAnyPlayerAlive()
 		APlayerController* PC = It->Get();
 		if (PC && PC->GetPawn())
 		{
-			APawn* MyPanw = PC->GetPawn();
+			 APawn* MyPanw = PC->GetPawn();
 			 USHealthComponent* HealthComp = Cast<USHealthComponent>(MyPanw->GetComponentByClass(USHealthComponent::StaticClass()));
 			 if (ensure(HealthComp) && HealthComp->GetHealth() > 0.0f)
 			 {
@@ -125,4 +128,13 @@ void ASGameMode::GameOver()
 	// @TODO: Finish up the match, present 'game over' to players.
 
 	UE_LOG(LogTemp, Log, TEXT("GAME OVER! Players Died"));
+}
+
+void ASGameMode::SetWaveState(EWaveState NewState)
+{
+	ASGameState* GS = GetGameState<ASGameState>();
+	if (ensureAlways(GS))
+	{
+		GS->WaveState = NewState;
+	}
 }
