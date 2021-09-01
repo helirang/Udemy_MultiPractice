@@ -3,6 +3,7 @@
 #include "SGameMode.h"
 #include "SHealthComponent.h"
 #include "SGameState.h"
+#include "SPlayerState.h"
 #include "TimerManager.h"	
 
 ASGameMode::ASGameMode()
@@ -10,6 +11,7 @@ ASGameMode::ASGameMode()
 	TimeBetweenWaves = 2.0f;
 
 	GameStateClass = ASGameMode::StaticClass();
+	PlayerStateClass = ASPlayerState::StaticClass();
 
 	//틱 활성화 및 간격 설정
 	PrimaryActorTick.bCanEverTick = true;
@@ -37,6 +39,8 @@ void ASGameMode::StartWave()
 	// 타이머 핸들이 있으면 추적 할 수 있다. 추적할 수 있으면 취소 등의 행위가 가능하다.
 	GetWorldTimerManager().SetTimer(TimerHandle_BotSpawner, this, &ASGameMode::SpawnBotTimerElapsed, 1.0f, true, 0.0f);
 	//기록될 TimerHandel, 실행시킬 GameMode의 obj?,작동시킬 함수, 지연시간(1초마다 함수 실행), 반복여부, 시작 딜레이 ( 처음 시작할 때의 딜레이 )
+
+	SetWaveState(EWaveState::WaveInProgress);
 }
 
 void ASGameMode::StartPlay()
@@ -57,12 +61,16 @@ void ASGameMode::Tick(float DeltaSeconds)
 void ASGameMode::EndWave()
 {
 	GetWorldTimerManager().ClearTimer(TimerHandle_BotSpawner);
+
+	SetWaveState(EWaveState::WatingToComplete);
 }
 
 void ASGameMode::PrepareForNextWave()
 {
 	
 	GetWorldTimerManager().SetTimer(TimerHandle_NextWaveStart, this, &ASGameMode::StartWave, TimeBetweenWaves, false);
+
+	SetWaveState(EWaveState::WatingToStart);
 }
 
 void ASGameMode::CheckWaveState()
@@ -94,8 +102,9 @@ void ASGameMode::CheckWaveState()
 		}
 	}
 
-	if (bIsAnyBotAlive)
+	if (!bIsAnyBotAlive)
 	{
+		SetWaveState(EWaveState::WaveComplete);
 		PrepareForNextWave();
 	}
 }
@@ -127,6 +136,8 @@ void ASGameMode::GameOver()
 
 	// @TODO: Finish up the match, present 'game over' to players.
 
+	SetWaveState(EWaveState::GameOver);
+
 	UE_LOG(LogTemp, Log, TEXT("GAME OVER! Players Died"));
 }
 
@@ -135,6 +146,6 @@ void ASGameMode::SetWaveState(EWaveState NewState)
 	ASGameState* GS = GetGameState<ASGameState>();
 	if (ensureAlways(GS))
 	{
-		GS->WaveState = NewState;
+		GS->SetWaveState(NewState);
 	}
 }

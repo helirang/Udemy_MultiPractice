@@ -36,9 +36,12 @@ protected:
 	// OldState 이전 상태를 알아야 예시) 기존 장착 장비 해제 및 새로운 장비 장착을 할 수 있다.
 	// 대충 이전 상태 해제용
 	UFUNCTION(BlueprintImplementableEvent, Category = "GameState")
-	void WaveStateChange(EWaveState NewsTATE, EWaveState OldState);
+	void WaveStateChange(EWaveState NewState, EWaveState OldState);
+
+	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_WaveState, Category = "GameState")
+	EWaveState WaveState;
 	
 public:
-	UPROPERTY(BlueprintReadOnly,ReplicatedUsing=OnRep_WaveState, Category = "GameState")
-	EWaveState WaveState;
+	
+	void SetWaveState(EWaveState NewState);
 };
